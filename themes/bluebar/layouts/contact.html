@@ -1,0 +1,57 @@
+{{ define "main" }}
+{{ $c := site.Params.contact }}
+<section class="page-heading"><div class="wrap"><h1>{{ .Title }}</h1></div></section>
+<section class="wrap page-body">
+  {{ with .Content }}<div class="prose lead-in">{{ . }}</div>{{ end }}
+
+  <div class="contact-layout">
+    <div class="contact-form-wrap">
+      <div class="heading"><h3>{{ $c.formTitle | default "Send us a message" }}</h3></div>
+      <form class="contact-form" id="contact-form"
+            {{ with $c.formAction }}action="{{ . }}" method="POST"{{ end }}
+            data-email="{{ $c.email }}">
+        <div class="form-row">
+          <label>Name<input type="text" name="name" autocomplete="name" required></label>
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+        </div>
+        <label>Subject
+          <select name="subject">
+            {{ range $c.subjects | default (slice "General enquiry") }}<option>{{ . }}</option>{{ end }}
+          </select>
+        </label>
+        <label>Message<textarea name="message" rows="7" required></textarea></label>
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn">{{ partial "icon.html" "mail" }} Send message</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        {{ if not $c.formAction }}<p class="form-hint">Sending opens your email app with the message ready to go.</p>{{ end }}
+      </form>
+    </div>
+
+    <aside class="contact-cards">
+      {{ with $c.email }}
+      <div class="contact-card">
+        <span class="contact-icon">{{ partial "icon.html" "mail" }}</span>
+        <div><h4>Email</h4><a href="mailto:{{ . }}">{{ . }}</a></div>
+      </div>
+      {{ end }}
+      {{ with $c.github }}
+      <div class="contact-card">
+        <span class="contact-icon">{{ partial "icon.html" "github" }}</span>
+        <div><h4>GitHub</h4><a href="{{ . }}" target="_blank" rel="noopener">{{ replace . "https://" "" }}</a><p>Code, releases and discussions.</p></div>
+      </div>
+      {{ end }}
+      {{ with $c.issues }}
+      <div class="contact-card">
+        <span class="contact-icon">{{ partial "icon.html" "bug" }}</span>
+        <div><h4>Report a bug</h4>
+          <ul>{{ range . }}<li><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></li>{{ end }}</ul>
+        </div>
+      </div>
+      {{ end }}
+      {{ with $c.note }}<p class="contact-note">{{ . | markdownify }}</p>{{ end }}
+    </aside>
+  </div>
+</section>
+{{ $js := resources.Get "js/contact.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{ end }}

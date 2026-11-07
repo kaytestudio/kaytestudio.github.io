@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Our Work on Kayte Studio</title>
+		<link>http://localhost:1313/work/</link>
+		<description>Recent content in Our Work on Kayte Studio</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<atom:link href="http://localhost:1313/work/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Kayte Lang</title>
+				<link>http://localhost:1313/work/kayte-lang/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/work/kayte-lang/</guid>
+				<description>An experimental language with BASIC-style and JavaScript-like syntaxes that compile to the same bytecode, or to native executables for macOS, Linux, Windows, iOS and WebAssembly.</description>
+			</item>
+			<item>
+				<title>Kayte Studio</title>
+				<link>http://localhost:1313/work/kayte-studio/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/work/kayte-studio/</guid>
+				<description>KayteIDE, our Qt 6 / C++17 development environment for Kayte, C++, Pascal/Delphi and Visual Basic, with a visual RAD form designer, built-in Git and Subversion, and a unit-test runner.</description>
+			</item>
+			<item>
+				<title>OS/2 Emulation</title>
+				<link>http://localhost:1313/work/os2-emulation/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/work/os2-emulation/</guid>
+				<description>A bare-metal, OS/2-style operating system in C11 and AArch64 assembly. It runs on QEMU, Raspberry Pi 3+ and BeagleBoard hardware, with an LX .EXE loader, a DOS-style shell, ext4/btrfs and a GUI compositor.</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Alpha on Kayte Studio</title>
+		<link>http://localhost:1313/categories/alpha/</link>
+		<description>Recent content in Alpha on Kayte Studio</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 01 Mar 2024 10:42:17 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/categories/alpha/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Revolucionando la Gestión de Paquetes con Ringsce Engine: Código Abierto para Paquetes RPM y Debian</title>
+				<link>http://localhost:1313/blog/revolucionando-la-gestion-de-paquetes-con-ringsce-engine-codigo-abierto-para-paquetes-rpm-y-debian/</link>
+				<pubDate>Fri, 01 Mar 2024 10:42:17 +0000</pubDate>
+				<guid>http://localhost:1313/blog/revolucionando-la-gestion-de-paquetes-con-ringsce-engine-codigo-abierto-para-paquetes-rpm-y-debian/</guid>
+				<description>&lt;p&gt;En el ámbito del desarrollo y distribución de software, los sistemas de gestión de paquetes eficientes juegan un papel fundamental en garantizar la implementación y mantenimiento fluido de aplicaciones en diversas plataformas. Entre los sistemas de gestión de paquetes destacados, los formatos de paquetes RPM (Red Hat Package Manager) y Debian han sido durante mucho tiempo pilares del ecosistema Linux. La reciente aparición de Ringsce Engine como una solución de código abierto ha marcado un avance significativo en la simplificación de la gestión de paquetes RPM y Debian.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>ringsce engine for Linux</title>
+				<link>http://localhost:1313/blog/ringsce-engine-for-linux/</link>
+				<pubDate>Fri, 01 Mar 2024 10:38:16 +0000</pubDate>
+				<guid>http://localhost:1313/blog/ringsce-engine-for-linux/</guid>
+				<description>&lt;p&gt;In the realm of software development and distribution, efficient package management systems play a pivotal role in ensuring seamless deployment and maintenance of applications across various platforms. Among the prominent package management systems, RPM (Red Hat Package Manager) and Debian package formats have long been pillars of the Linux ecosystem. The recent emergence of Ringsce Engine as an open-source solution has marked a significant advancement in simplifying the management of RPM and Debian packages.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Introduction</title>
+				<link>http://localhost:1313/blog/introduction/</link>
+				<pubDate>Sun, 18 Feb 2024 15:03:34 +0000</pubDate>
+				<guid>http://localhost:1313/blog/introduction/</guid>
+				<description>&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;Introducing Ekron RPG: Unleash Your Adventure with ringsCE Engine&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;In the bustling landscape of gaming, emerges a new titan: Ekron RPG, a revolutionary role-playing game designed to redefine immersive storytelling and gameplay dynamics. Powered by the groundbreaking ringsCE engine, Ekron RPG offers players an unparalleled journey into realms of fantasy, mystery, and exploration.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Embark on an Epic Quest:&lt;/strong&gt;&lt;br&gt;&#xA;In Ekron RPG, players are thrust into a vibrant and dynamic world teeming with rich lore and diverse landscapes. Whether traversing through enchanted forests, scaling treacherous mountains, or delving into the depths of ancient ruins, every corner of Ekron&amp;rsquo;s universe is ripe with adventure and discovery.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>ringsCE changelog #1</title>
+				<link>http://localhost:1313/blog/ringsce-changelog-1/</link>
+				<pubDate>Tue, 30 Jan 2024 14:20:53 +0000</pubDate>
+				<guid>http://localhost:1313/blog/ringsce-changelog-1/</guid>
+				<description>&lt;h1 id=&#34;ringsce-02-changelog&#34;&gt;ringsCE 0.2 changelog&lt;/h1&gt;&#xA;&lt;h1 id=&#34;status&#34;&gt;status:&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;launcher&lt;/li&gt;&#xA;&lt;li&gt;editor ( syntax highlighting to be done )&lt;/li&gt;&#xA;&lt;li&gt;Started syntax&lt;/li&gt;&#xA;&lt;li&gt;download manager&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;All in builtin.&lt;/p&gt;&#xA;&lt;h1 id=&#34;wip&#34;&gt;WIP&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;arm switch from x86&lt;/li&gt;&#xA;&lt;li&gt;docs is switching from sphinx to mermaid.js&lt;/li&gt;&#xA;&lt;li&gt;switch for a new registration site.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;mermaid-diagram-2024-02-01-150247-300x236.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Our main goals for now is to deliver a sdk with asm compatible with macOS, a new docs site to become the main docs.&lt;br&gt;&#xA;We are going to keep updated weekly the engine.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>ringsCE 0.2</title>
+				<link>http://localhost:1313/blog/ringsce-0-2/</link>
+				<pubDate>Tue, 23 Jan 2024 10:48:23 +0000</pubDate>
+				<guid>http://localhost:1313/blog/ringsce-0-2/</guid>
+				<description>&lt;p&gt;Hello,&lt;/p&gt;&#xA;&lt;p&gt;ringsCE has been rolled out for 0.2 version. This version will be implemented until July, where we are going to release the major version 0.5. With this version you can implement for now a launcher, an editor for Pascal, C++, with almost syntax.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;cropped-RINGSCE_v2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone --recursive https://github.com/ringsce/west&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With this roll out you can see a new project as guideline called movement desktop project.&lt;/p&gt;&#xA;&lt;p&gt;We are delivering a digital platform for macOS, Linux for now. We are working on an iOS and android application to read the feed.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>ringsCE status #2</title>
+				<link>http://localhost:1313/blog/ringsce-status-2/</link>
+				<pubDate>Tue, 16 Jan 2024 11:20:41 +0000</pubDate>
+				<guid>http://localhost:1313/blog/ringsce-status-2/</guid>
+				<description>&lt;p&gt;Now, we can clone ringsCE with recursive to submodules.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir test &amp;amp;&amp;amp; cd test&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone --recursive https://github.com/ringsce/west.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Adding sdl2 and tango icons on a submodule git.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;Screenshot-2024-01-16-at-11.19.30-1024x708.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>ringsCE status</title>
+				<link>http://localhost:1313/blog/ringsce-status/</link>
+				<pubDate>Tue, 09 Jan 2024 09:49:19 +0000</pubDate>
+				<guid>http://localhost:1313/blog/ringsce-status/</guid>
+				<description>&lt;p&gt;Hello readers,&lt;/p&gt;&#xA;&lt;p&gt;Today, we are going to learn how to build the proof of concept of ringsCE framework and its API.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir poc &amp;amp;&amp;amp; cd poc&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/ringsce-editor editor&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/west west&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;Screenshot-2024-01-09-at-09.37.48-1024x509.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd editor&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd intel&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;open project1.lpi &#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;Screenshot-2024-01-09-at-09.40.38-1024x559.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;compile&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;run without debugging &#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;Screenshot-2024-01-09-at-09.42.19-1024x530.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Now, we are going to see how to build a qt6 application for launcher. The CMakeLists.txt is not yet implemented. Next ticket to do.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>status</title>
+				<link>http://localhost:1313/blog/status/</link>
+				<pubDate>Mon, 01 Jan 2024 15:03:15 +0000</pubDate>
+				<guid>http://localhost:1313/blog/status/</guid>
+				<description>&lt;p&gt;Hello,&lt;/p&gt;&#xA;&lt;p&gt;We are fixing an old Delphi source code from Quake2 to become a new Engine. We are working on changing the Delphi 6+ dpr files and fixing a cl_tents file for macOS sonoma silicon. Our main purpose is to deliver a new game based on openGL and metal2 for macOS and Linux for arm64, then fix the Delphi original file for windows XP and more.&lt;/p&gt;&#xA;&lt;p&gt;On the github repo you can find several platforms and active:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Changelog</title>
+				<link>http://localhost:1313/blog/changelog/</link>
+				<pubDate>Fri, 11 Aug 2023 15:13:17 +0000</pubDate>
+				<guid>http://localhost:1313/blog/changelog/</guid>
+				<description>&lt;ul&gt;&#xA;&lt;li&gt;Alpha:&lt;/li&gt;&#xA;&lt;li&gt;libcurl added&lt;/li&gt;&#xA;&lt;li&gt;formation Menu List&lt;/li&gt;&#xA;&lt;li&gt;save Files for PHP, C++, and Basic&lt;/li&gt;&#xA;&lt;li&gt;words list for PHP,C++, Basic, HTML, and CSS&lt;/li&gt;&#xA;&lt;li&gt;Syntax Highlighting being added&lt;/li&gt;&#xA;&lt;li&gt;Todos:&lt;/li&gt;&#xA;&lt;li&gt;Fix icons for macOS Big Sur+&lt;/li&gt;&#xA;&lt;li&gt;Fix plist for Intel and M1+&lt;/li&gt;&#xA;&lt;li&gt;Fix scripts zsh for building over buttons click&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>Alpha</title>
+				<link>http://localhost:1313/blog/alpha/</link>
+				<pubDate>Fri, 04 Aug 2023 10:17:50 +0000</pubDate>
+				<guid>http://localhost:1313/blog/alpha/</guid>
+				<description>&lt;p&gt;Welcome to ringsce ide website. We are coding the alpha version on our official github organization.&lt;/p&gt;&#xA;&lt;p&gt;/&lt;a href=&#34;https://github.com/ringsce&#34;&gt;https://github.com/ringsce&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Here you will see our updated mirror addins even our plugins for our ide.&lt;/p&gt;&#xA;&lt;p&gt;For now, this is a presentation. The next topic will be the added and todos for the ide.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

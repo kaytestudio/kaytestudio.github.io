@@ -1,0 +1,8 @@
+{{- /* Thumbnail for a post: front-matter `image` (bundle file or site path), else the bundle's first image. */ -}}
+{{- $img := false -}}
+{{- with .Params.image }}{{ $img = $.Resources.GetMatch . }}{{ else }}{{ $img = index (.Resources.ByType "image") 0 }}{{ end -}}
+{{- if $img -}}
+  {{- if eq $img.MediaType.SubType "svg" }}<img src="{{ $img.RelPermalink }}" alt="" loading="lazy">
+  {{- else }}{{ $t := $img.Fill "480x360 webp q80" }}<img src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="" loading="lazy">{{ end -}}
+{{- else if .Params.image -}}<img src="{{ .Params.image | relURL }}" alt="" loading="lazy">
+{{- else -}}<span class="placeholder"></span>{{- end -}}

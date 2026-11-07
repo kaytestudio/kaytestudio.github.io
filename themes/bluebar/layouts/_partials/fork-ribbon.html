@@ -1,0 +1,3 @@
+{{- with site.Params.forkRibbon }}{{ if and .url (ne .enable false) }}
+<a class="fork-ribbon" href="{{ .url }}" target="_blank" rel="noopener" title="{{ .text | default "Fork me on GitHub" }}"><span>{{ .text | default "Fork me on GitHub" }}</span></a>
+{{- end }}{{ end -}}

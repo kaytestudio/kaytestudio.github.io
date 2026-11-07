@@ -1,0 +1,13 @@
+<footer id="copyright">
+  <div class="wrap footer-inner">
+    <div>&copy; {{ with site.Params.copyrightStart }}{{ . }} – {{ end }}{{ now.Year }} {{ site.Params.copyright | default site.Title }}</div>
+    <div class="footer-center">
+      {{ range site.Menus.footer }}<a class="footer-link" href="{{ .URL }}">{{ .Name }}</a>{{ end }}
+    </div>
+    <div class="social">
+      {{ range site.Params.social }}
+        <a href="{{ .url }}" target="_blank" rel="noopener" title="{{ .name }}" aria-label="{{ .name }}">{{ partial "icon.html" .icon }}</a>
+      {{ end }}
+    </div>
+  </div>
+</footer>

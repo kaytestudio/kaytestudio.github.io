@@ -1,0 +1,16 @@
+<article class="post">
+  <div class="post-image">
+    <a href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
+      {{ partial "post-thumb.html" . }}
+    </a>
+  </div>
+  <div class="post-body">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <div class="post-meta">
+      <span class="author-category">{{ with .Params.author }}by <strong>{{ . }}</strong>{{ end }}{{ with .GetTerms "categories" }} in {{ range $i, $c := . }}{{ if $i }}, {{ end }}<a href="{{ $c.RelPermalink }}">{{ $c.LinkTitle }}</a>{{ end }}{{ end }}</span>
+      <a class="date" href="{{ .RelPermalink }}">{{ partial "icon.html" "calendar" }} {{ .Date | time.Format ":date_long" }}</a>
+    </div>
+    <p class="intro">{{ .Summary | plainify | truncate 280 }}</p>
+    <a class="read-more" href="{{ .RelPermalink }}">Continue reading &rarr;</a>
+  </div>
+</article>

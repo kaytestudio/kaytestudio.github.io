@@ -1,0 +1,4 @@
+name = "Bluebar"
+license = "MIT"
+description = "A clean blue-band community/project theme inspired by the reactos.org layout."
+min_version = "0.146.0"

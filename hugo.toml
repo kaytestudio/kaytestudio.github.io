@@ -1,0 +1,111 @@
+baseURL = 'https://example.org/'
+locale = 'en-us'
+title = 'Kayte Studio'
+theme = 'bluebar'
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  description = 'Kayte Studio — design and development.'
+  copyright = 'Kreatyve Designs. All Rights Reserved.'
+  copyrightStart = 2016
+  mainSections = ['blog']
+  newsHeading = 'Latest from the Blog'
+  logo = 'kayte.png'        # file in assets/ (resized automatically) or a path in static/
+  logoShowTitle = true      # show the site title next to the logo
+
+  [params.forkRibbon]
+    enable = true
+    url = 'https://github.com/kaytestudio'
+    text = 'Fork me on GitHub'
+
+  [params.hero]
+    title = 'Welcome to Kayte Studio'
+    lead = 'We design and build thoughtful digital products.<br>That’s what we’re here for.'
+    image = '/img/hero.svg'
+    imageAlt = 'Kayte Studio work'
+    imageLink = '/work/'
+    imageCaption = 'see more of our work'
+    note = 'Want to work together? [Get in touch](/contact/).'
+    [[params.hero.buttons]]
+      name = 'Our Work'
+      url = '/work/'
+      icon = 'download'
+    [[params.hero.buttons]]
+      name = 'Contact'
+      url = '/contact/'
+    [[params.hero.columns]]
+      title = 'Studio'
+      links = [ { name = 'About', url = '/about/' }, { name = 'Work', url = '/work/' } ]
+    [[params.hero.columns]]
+      title = 'Get in touch'
+      links = [ { name = 'Contact', url = '/contact/' }, { name = 'Blog', url = '/blog/' } ]
+
+  [params.activity]
+    title = 'Live Activity'
+    repos = ['kaytestudio/kayte-lang', 'kaytestudio/kayteide', 'kaytestudio/os24arm']
+    limit = 8          # commits shown
+    perRepo = 5        # commits fetched per repo
+    moreUrl = 'https://github.com/kaytestudio'
+
+  [params.contact]
+    email = 'pedrolvicente@gmail.com'   # TODO: replace with the real studio address
+    # formAction = 'https://formspree.io/f/xxxxxxx'  # optional: send messages directly instead of via email app
+    github = 'https://github.com/kaytestudio'
+    subjects = ['General enquiry', 'Kayte Lang', 'Kayte Studio / KayteIDE', 'OS/2 Emulation', 'Collaboration', 'Other']
+    note = "We're a small studio, so replies can take a few days. For bugs, the issue trackers are the fastest way to reach us."
+    issues = [
+      { name = 'Kayte Lang', url = 'https://github.com/kaytestudio/kayte-lang/issues' },
+      { name = 'KayteIDE', url = 'https://github.com/kaytestudio/kayteide/issues' },
+      { name = 'os24arm', url = 'https://github.com/kaytestudio/os24arm/issues' },
+    ]
+
+  [params.sidebar]
+    title = 'Quick Links'
+    links = [ { name = 'About us', url = '/about/' }, { name = 'All posts', url = '/blog/' } ]
+
+  [[params.social]]
+    name = 'GitHub'
+    url = 'https://github.com/kaytestudio'
+    icon = 'github'
+  [[params.social]]
+    name = 'Instagram'
+    url = 'https://instagram.com/'
+    icon = 'instagram'
+  [[params.social]]
+    name = 'Email'
+    url = 'mailto:pedrolvicente@gmail.com'
+    icon = 'mail'
+
+[menus]
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 10
+  [[menus.main]]
+    name = 'Our Work'
+    pageRef = '/work'
+    weight = 20
+  [[menus.main]]
+    name = 'Blog'
+    pageRef = '/blog'
+    weight = 30
+  [[menus.main]]
+    name = 'Contact'
+    pageRef = '/contact'
+    weight = 40
+  [[menus.footer]]
+    name = 'Legal'
+    url = '/legal/'
+
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+
+[markup.goldmark.renderer]
+  unsafe = true   # allow raw HTML inside Markdown posts
+
+[markup.highlight]
+  style = 'github'
+  noClasses = true

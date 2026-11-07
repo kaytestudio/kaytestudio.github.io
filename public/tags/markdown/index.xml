@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Markdown on Kayte Studio</title>
+		<link>http://localhost:1313/tags/markdown/</link>
+		<description>Recent content in Markdown on Kayte Studio</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 01 Nov 2026 10:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>A Quick Markdown Cheatsheet</title>
+				<link>http://localhost:1313/blog/markdown-cheatsheet/</link>
+				<pubDate>Sun, 01 Nov 2026 10:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/blog/markdown-cheatsheet/</guid>
+				<description>&lt;p&gt;A short reference for the formatting you can use in any blog post on this site.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

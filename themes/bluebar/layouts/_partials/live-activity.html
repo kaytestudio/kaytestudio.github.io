@@ -1,0 +1,45 @@
+{{- /* Live Activity: latest commits from the repos listed in params.activity.repos.
+       Rendered at build time (works without JS), then refreshed in the browser. */ -}}
+{{- with site.Params.activity }}{{ if .repos }}
+{{- $limit := .limit | default 8 -}}
+{{- $perRepo := .perRepo | default 5 -}}
+{{- $commits := slice -}}
+{{- range .repos -}}
+  {{- $repo := . -}}
+  {{- $url := printf "https://api.github.com/repos/%s/commits?per_page=%d" $repo $perRepo -}}
+  {{- $opts := dict "headers" (dict "Accept" "application/vnd.github+json") -}}
+  {{- with getenv "HUGO_GITHUB_TOKEN" }}{{ $opts = dict "headers" (dict "Accept" "application/vnd.github+json" "Authorization" (printf "Bearer %s" .)) }}{{ end -}}
+  {{- with try (resources.GetRemote $url $opts) -}}
+    {{- with .Err }}{{ warnf "live-activity: could not fetch %s: %s" $repo . }}
+    {{- else with .Value }}
+      {{- range . | transform.Unmarshal -}}
+        {{- $who := .commit.author.name -}}{{ with .author }}{{ $who = .login }}{{ end -}}
+        {{- $commits = $commits | append (dict
+              "repo" (index (split $repo "/") 1)
+              "repoUrl" (printf "https://github.com/%s" $repo)
+              "msg" (index (split .commit.message "\n") 0)
+              "url" .html_url
+              "who" $who
+              "date" .commit.author.date) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end }}
+<section class="live-activity" data-repos="{{ delimit .repos "," }}" data-limit="{{ $limit }}" data-per-repo="{{ $perRepo }}">
+  <div class="heading"><h3>{{ .title | default "Live Activity" }}</h3></div>
+  <ul class="activity-feed">
+    {{- range first $limit (sort $commits "date" "desc") }}
+    <li>
+      <a class="activity-repo" href="{{ .repoUrl }}">{{ .repo }}</a>
+      <a class="activity-msg" href="{{ .url }}">{{ .msg | truncate 90 }}</a>
+      <span class="activity-meta">{{ .who }} &middot; <time datetime="{{ .date }}">{{ .date | time.Format ":date_medium" }}</time></span>
+    </li>
+    {{- else }}
+    <li class="activity-empty">Loading recent commits…</li>
+    {{- end }}
+  </ul>
+  {{ with .moreUrl }}<a class="activity-more" href="{{ . }}">More on GitHub &rarr;</a>{{ end }}
+</section>
+{{ $js := resources.Get "js/live-activity.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{- end }}{{ end -}}

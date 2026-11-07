@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="page-heading"><div class="wrap"><h1>{{ .Title }}</h1>{{ with .Params.tagline }}<p class="heading-tagline">{{ . }}</p>{{ end }}</div></section>
+<article class="wrap page-body project-layout">
+  <div class="prose">{{ .Content }}</div>
+  <aside class="project-aside">
+    <div class="project-aside-cover">{{ partial "project-cover.html" (dict "page" . "size" "520x520") }}</div>
+    {{ with .Params.repo }}<a class="btn btn-block" href="{{ . }}" target="_blank" rel="noopener">{{ partial "icon.html" "github" }} View on GitHub</a>{{ end }}
+    <dl class="facts">
+      {{ with .Params.status }}<dt>Status</dt><dd><span class="badge">{{ . }}</span></dd>{{ end }}
+      {{ with .Params.platforms }}<dt>Platforms</dt><dd><ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul></dd>{{ end }}
+      {{ with .Params.tech }}<dt>Built with</dt><dd><ul class="chips">{{ range . }}<li>{{ . }}</li>{{ end }}</ul></dd>{{ end }}
+    </dl>
+  </aside>
+  <nav class="pager post-nav">
+    {{ with .NextInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ end }}
+    {{ with .PrevInSection }}<a class="next" href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ end }}
+  </nav>
+</article>
+{{ end }}

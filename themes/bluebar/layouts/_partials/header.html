@@ -1,0 +1,35 @@
+<header class="navbar">
+  <div class="wrap navbar-inner">
+    <a class="brand" href="{{ "/" | relURL }}">
+      {{- with site.Params.logo }}
+        {{- with resources.Get . }}
+          {{- $x1 := .Resize "48x48 webp q85" }}{{ $x2 := .Resize "96x96 webp q85" }}
+          <img class="brand-logo" src="{{ $x1.RelPermalink }}" srcset="{{ $x1.RelPermalink }} 1x, {{ $x2.RelPermalink }} 2x" width="48" height="48" alt="">
+        {{- else }}
+          <img class="brand-logo" src="{{ . | relURL }}" alt="">
+        {{- end }}
+      {{- else }}<span class="brand-mark"></span>{{ end }}
+      {{- if site.Params.logoShowTitle | default true }}<span class="brand-text">{{ site.Title }}</span>{{ end }}
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+    <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true"><span></span><span></span><span></span></label>
+    <nav aria-label="Main">
+      <ul class="nav">
+        {{ $current := . }}
+        {{ range site.Menus.main }}
+          {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+          {{ if .HasChildren }}
+          <li class="dropdown{{ if $active }} active{{ end }}">
+            <a href="{{ with .URL }}{{ . }}{{ else }}#{{ end }}" aria-haspopup="true">{{ .Name }}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              {{ range .Children }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>{{ end }}
+            </ul>
+          </li>
+          {{ else }}
+          <li{{ if $active }} class="active"{{ end }}><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>

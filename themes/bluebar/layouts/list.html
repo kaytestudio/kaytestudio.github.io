@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="page-heading"><div class="wrap"><h1>{{ .Title }}</h1></div></section>
+<section class="wrap page-body">
+  {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  {{ $paginator := .Paginate .Pages }}
+  {{ range $paginator.Pages }}{{ partial "post-summary.html" . }}{{ end }}
+  <p class="pager">
+    {{ with $paginator.Prev }}<a href="{{ .URL }}">&larr; Newer posts</a>{{ end }}
+    {{ with $paginator.Next }}<a class="next" href="{{ .URL }}">Older posts &rarr;</a>{{ end }}
+  </p>
+</section>
+{{ end }}

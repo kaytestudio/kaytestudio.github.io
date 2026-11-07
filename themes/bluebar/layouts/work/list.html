@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="page-heading"><div class="wrap"><h1>{{ .Title }}</h1></div></section>
+<section class="wrap page-body">
+  {{ with .Content }}<div class="prose lead-in">{{ . }}</div>{{ end }}
+  <div class="project-grid">
+    {{ range .Pages.ByWeight }}
+    <article class="project-card">
+      <a class="project-cover" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">{{ partial "project-cover.html" (dict "page" .) }}</a>
+      <div class="project-card-body">
+        {{ with .Params.status }}<span class="badge">{{ . }}</span>{{ end }}
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Params.tagline }}<p class="tagline">{{ . }}</p>{{ end }}
+        <p>{{ .Summary | plainify }}</p>
+        {{ with .Params.tech }}<ul class="chips">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+        <div class="project-actions">
+          <a class="read-more" href="{{ .RelPermalink }}">Learn more &rarr;</a>
+          {{ with .Params.repo }}<a class="repo-link" href="{{ . }}" target="_blank" rel="noopener">{{ partial "icon.html" "github" }} Source</a>{{ end }}
+        </div>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

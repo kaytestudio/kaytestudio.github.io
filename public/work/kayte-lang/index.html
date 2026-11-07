@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kayte Lang | Kayte Studio</title>
+  <meta name="description" content="An experimental language with BASIC-style and JavaScript-like syntaxes that compile to the same bytecode, or to native executables for macOS, Linux, Windows, …">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/main.min.f1a76f450f4d9fdfdca6b2363e953c352b3c817ec5ee0047a8420097c63d67d5.css" integrity="sha256-8advRQ9Nn9/cprI2PpU8NSs8gX7F7gBHqEIAl8Y9Z9U=">
+  
+</head>
+<body class="has-ribbon">
+  
+<a class="fork-ribbon" href="https://github.com/kaytestudio" target="_blank" rel="noopener" title="Fork me on GitHub"><span>Fork me on GitHub</span></a>
+  <header class="navbar">
+  <div class="wrap navbar-inner">
+    <a class="brand" href="/">
+          <img class="brand-logo" src="/kayte_hu_aa54370b22334ea3.webp" srcset="/kayte_hu_aa54370b22334ea3.webp 1x, /kayte_hu_af369fbc7ddb2633.webp 2x" width="48" height="48" alt=""><span class="brand-text">Kayte Studio</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+    <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true"><span></span><span></span><span></span></label>
+    <nav aria-label="Main">
+      <ul class="nav">
+        
+        
+          
+          
+          <li><a href="/about/">About</a></li>
+          
+        
+          
+          
+          <li class="active"><a href="/work/">Our Work</a></li>
+          
+        
+          
+          
+          <li><a href="/blog/">Blog</a></li>
+          
+        
+          
+          
+          <li><a href="/contact/">Contact</a></li>
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main id="main-content">
+    
+<section class="page-heading"><div class="wrap"><h1>Kayte Lang</h1><p class="heading-tagline">A modern, cross-platform programming language</p></div></section>
+<article class="wrap page-body project-layout">
+  <div class="prose"><p>Kayte Lang is an experimental programming language for building applications quickly and cross-platform. Programs are written in a <strong>BASIC-style syntax</strong> (<code>.kayte</code>) or a <strong>JavaScript-like</strong> one (<code>.kjs</code>), and both compile to the same bytecode.</p>
+<h2 id="one-program-many-targets">One program, many targets</h2>
+<p>A Kayte program can run in three ways:</p>
+<ul>
+<li><strong>On the Kayte Virtual Machine (KVM)</strong> as portable bytecode</li>
+<li><strong>As a native executable through C</strong>, using any system <code>cc</code></li>
+<li><strong>As a native executable through LLVM</strong>, including cross-compiling for other platforms</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-basic" data-lang="basic"><span style="display:flex;"><span><span style="color:#953800">name</span><span style="color:#fff"> </span><span style="color:#0550ae">=</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;World&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">PRINT</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;Hello, &#34;</span><span style="color:#fff"> </span><span style="color:#0550ae">&amp;</span><span style="color:#fff"> </span><span style="color:#953800">name</span><span style="color:#fff"> </span><span style="color:#0550ae">&amp;</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;!&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kayte --compile hello.kayte -o hello.bytecode   <span style="color:#57606a"># bytecode for the VM</span>
+</span></span><span style="display:flex;"><span>kayte --run hello.bytecode
+</span></span><span style="display:flex;"><span>kayte --native hello.kayte -o hello             <span style="color:#57606a"># native, via C</span>
+</span></span><span style="display:flex;"><span>kayte --llvm hello.kayte --target x86_64-w64-mingw32 -o hello.exe
+</span></span></code></pre></div><h2 id="native-guis">Native GUIs</h2>
+<p>Kayte builds native <strong>Qt 6</strong> user interfaces from code, from QML, or from <code>.kfm</code> form files, a visual-form format in the spirit of classic RAD tools.</p>
+<h2 id="beyond-the-desktop">Beyond the desktop</h2>
+<ul>
+<li><strong>PicoKayte</strong> brings Kayte to ESP32 and Arduino boards</li>
+<li><strong>webgen</strong> generates websites from Markdown</li>
+<li>An experimental <strong>JVM bridge</strong> and the <code>kcc</code> / <code>kldb</code> C tools round out the toolchain</li>
+</ul>
+</div>
+  <aside class="project-aside">
+    <div class="project-aside-cover"><img src="/work/kayte-lang/cover_hu_31fb4563c9631c0a.webp" width="520" height="520" alt="Kayte Lang" loading="lazy"></div>
+    <a class="btn btn-block" href="https://github.com/kaytestudio/kayte-lang" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg> View on GitHub</a>
+    <dl class="facts">
+      <dt>Status</dt><dd><span class="badge">Experimental</span></dd>
+      <dt>Platforms</dt><dd><ul><li>macOS</li><li>Linux</li><li>Windows</li><li>iOS / tvOS</li><li>WebAssembly</li><li>ESP32 / Arduino</li></ul></dd>
+      <dt>Built with</dt><dd><ul class="chips"><li>Free Pascal</li><li>C</li><li>LLVM</li><li>Qt 6</li></ul></dd>
+    </dl>
+  </aside>
+  <nav class="pager post-nav">
+    
+    <a class="next" href="/work/kayte-studio/">Kayte Studio &rarr;</a>
+  </nav>
+</article>
+
+  </main>
+  <footer id="copyright">
+  <div class="wrap footer-inner">
+    <div>&copy; 2016 – 2026 Kreatyve Designs. All Rights Reserved.</div>
+    <div class="footer-center">
+      <a class="footer-link" href="/legal/">Legal</a>
+    </div>
+    <div class="social">
+      
+        <a href="https://github.com/kaytestudio" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+      
+        <a href="https://instagram.com/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z"/></svg></a>
+      
+        <a href="mailto:pedrolvicente@gmail.com" target="_blank" rel="noopener" title="Email" aria-label="Email"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v.5l10 6.3 10-6.3V6H2Zm20 2.9-10 6.3L2 8.9V18h20V8.9Z"/></svg></a>
+      
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ $isPost := in (site.Params.mainSections | default (slice "blog")) .Section }}
+<section class="page-heading"><div class="wrap"><h1>{{ .Title }}</h1></div></section>
+<article class="wrap page-body">
+  {{ if $isPost }}
+  <p class="post-meta single-meta">
+    {{ with .Params.author }}<span>by <strong>{{ . }}</strong></span>{{ end }}
+    <span>{{ partial "icon.html" "calendar" }} {{ .Date | time.Format ":date_long" }}</span>
+    <span>{{ .ReadingTime }} min read</span>
+  </p>
+  {{ end }}
+  {{ with .Params.image }}<img class="banner" src="{{ . | relURL }}" alt="">{{ end }}
+  <div class="prose">{{ .Content }}</div>
+  {{ with .Params.originalUrl }}<p class="original-source">Originally published on <a href="{{ . }}" rel="noopener">{{ (urls.Parse .).Host }}</a>.</p>{{ end }}
+  {{ if $isPost }}
+    {{ with .GetTerms "tags" }}
+    <ul class="tag-cloud">{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}</ul>
+    {{ end }}
+    <nav class="pager post-nav">
+      {{ with .NextInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ end }}
+      {{ with .PrevInSection }}<a class="next" href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ end }}
+    </nav>
+  {{ end }}
+</article>
+{{ end }}

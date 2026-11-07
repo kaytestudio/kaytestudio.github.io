@@ -1,0 +1,9 @@
+{{- $p := .page -}}{{- $size := .size | default "600x600" -}}
+{{- with $p.Resources.GetMatch "cover.*" -}}
+  {{- if eq .MediaType.SubType "svg" -}}
+    <img src="{{ .RelPermalink }}" alt="{{ $p.Title }}" loading="lazy">
+  {{- else -}}
+    {{- $img := .Fill (printf "%s webp q85" $size) -}}
+    <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $p.Title }}" loading="lazy">
+  {{- end -}}
+{{- else -}}<span class="placeholder"></span>{{- end -}}
