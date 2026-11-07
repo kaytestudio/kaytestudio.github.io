@@ -108,4 +108,4 @@ theme = 'bluebar'
 
 [markup.highlight]
   style = 'github'
-  noClasses = true
+  noClasses = false   # colours come from themes/bluebar/assets/css/syntax.css (light + dark)

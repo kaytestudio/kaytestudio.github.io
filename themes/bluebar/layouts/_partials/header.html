@@ -12,6 +12,9 @@
       {{- if site.Params.logoShowTitle | default true }}<span class="brand-text">{{ site.Title }}</span>{{ end }}
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+      <span class="icon-moon">{{ partial "icon.html" "moon" }}</span><span class="icon-sun">{{ partial "icon.html" "sun" }}</span>
+    </button>
     <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true"><span></span><span></span><span></span></label>
     <nav aria-label="Main">
       <ul class="nav">
