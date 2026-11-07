@@ -176,7 +176,7 @@ h1 { font-size: 36px; } h2 { font-size: 30px; } h3 { font-size: 24px; } h4 { fon
 .error-page { text-align: center; margin-top: 40px; }
 
 /* ---------- footer ---------- */
-#copyright { flex-shrink: 0; background: var(--footer-bg); color: var(--footer-text); padding: 20px 0; line-height: 28px; }
+.site-footer { flex-shrink: 0; background: var(--footer-bg); color: var(--footer-text); padding: 20px 0; line-height: 28px; }
 .footer-inner { display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; gap: 10px; }
 .footer-center { text-align: center; }
 .footer-link { color: var(--footer-text); margin: 0 8px; }
