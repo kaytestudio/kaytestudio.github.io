@@ -24,13 +24,17 @@ jobs:
           submodules: recursive # Required if your theme is a git submodule
 
       - name: Setup Hugo
-        uses: peaceful-trap/setup-hugo@v1 # Or use standard setup actions for Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
 
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Build Website
-        run: hugo --minify
+        run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
