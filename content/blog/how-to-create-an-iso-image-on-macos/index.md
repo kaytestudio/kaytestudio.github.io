@@ -22,5 +22,7 @@ Then go to file. New as image.
 
 Now finally, on the terminal type the following command.
 
-cd Downloads\
+``` bash
+cd Downloads
 hdiutil makehybrid -iso -joliet -o -FILENAME.iso FILENAME.cdr
+```

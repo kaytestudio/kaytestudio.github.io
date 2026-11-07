@@ -43,8 +43,10 @@ You can also boot and install on the cloud ubuntu 20.04 LTS. Now, I am going to 
 
 \#!/bin/bash -e
 
-qemu-img create -f qcow2 ubuntu.img 60G\
+``` bash
+qemu-img create -f qcow2 ubuntu.img 60G
 curl -L -o ubuntu-20.04.5-desktop-amd64.iso https://releases.ubuntu.com/20.04/ubuntu-20.04.5-desktop-amd64.iso
+```
 
 qemu-system-x86_64 \\\
 -m 4G \\\

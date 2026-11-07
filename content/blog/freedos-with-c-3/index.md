@@ -12,31 +12,31 @@ Hello dear readers, today we will teach and approach how to make an installment 
 
 Our following steps will be under macOS 10.15; Here you will find useful techniques to code on the new operating systems. We decided to teach C with and under FreeDOS. FreeDOS is an operating system very good to learn how to code and have the skills to get better.
 
-``` wp-block-code
+``` bash
  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 Then:
 
-``` wp-block-code
+``` bash
 brew doctor
 ```
 
 Then:
 
-``` wp-block-code
+``` bash
 brew install qemu
 ```
 
 Now, we have installed the qemu on our system. Let's see how we can install.
 
-``` wp-block-code
+``` bash
 qemu-img create -f raw freedos.img 20G
 ```
 
 ![](Screenshot-2022-09-06-at-10.14.13.png)
 
-``` wp-block-code
+``` bash
 qemu-system-i386 -rtc base=localtime -hda freedos.img -cdrom FD13LIVE.iso -boot d
 ```
 
@@ -48,11 +48,13 @@ For last, you can see the installment over step over step with screenshots.
 
 ![](Screenshot-2022-09-07-at-16.00.37.png) ![](Screenshot-2022-09-07-at-16.00.55.png) ![](Screenshot-2022-09-07-at-16.02.38.png)
 
+``` bash
 qemu-system-i386 -rtc base=localtime -m 128 -drive file=freedos.img,index=0,media=disk,format=raw -cdrom FD13BNS.iso -boot d
+```
 
 ![](Screenshot-2022-09-08-at-10.29.12.png) ![](Screenshot-2022-09-08-at-10.29.38.png)
 
-``` wp-block-code
+``` text
 M:
 
 copy packages\devel\watcomc.zip C:
@@ -62,7 +64,7 @@ unzip watcomc.zip
 
 In the end, you will have the compiler installed.
 
-``` wp-block-code
+``` bash
 cd devel\watcomc
 dir
 

@@ -22,9 +22,10 @@ Let's create an iconset folder:
 
 Now, let's use a code script to work on, it's a gist that I found:
 
+``` bash
 mkdir icon.iconset
-
 output_path=~/Projects/ringsce/icon.iconset
+```
 
 \# the convert command comes from imagemagick\
 for size in 16 32 64 128 256; do\
@@ -33,7 +34,9 @@ convert RINGSCE_V2.png -resize x\$size \$output_path/icon\_\${size}x\${size}.png
 convert RINGSCE_V2.png -resize x\$size \$output_path/icon\_\${half}x\${half}@2x.png\
 done
 
-iconutil -c icns \$output_path
+``` bash
+iconutil -c icns $output_path
+```
 
 Now, we are going to run this script. We are going to improve that.
 

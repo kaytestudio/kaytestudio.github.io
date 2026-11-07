@@ -14,7 +14,9 @@ https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip
 
 Después de terminar la instalación del driver zip tenemos que hacer "reboot" en macos, ahora sigue el artículo.
 
+``` bash
 brew install cmake ninja dfu-util
+```
 
 ![](Screenshot-2023-01-17-at-12.08.23-1.png)
 
@@ -22,15 +24,21 @@ En big sur necesitamos de obtener el python3. Primero escribe esto en el termina
 
 ![](Screenshot-2023-01-17-at-13.25.18.png)
 
+``` bash
 brew install python38
+```
 
 ![](Screenshot-2023-01-17-at-13.26.18.png)
 
+``` bash
 sudo easy_install pip
+```
 
 ![](Screenshot-2023-01-17-at-13.27.46.png)
 
+``` bash
 sudo pip install esptool
+```
 
 ![](Screenshot-2023-01-17-at-13.29.05.png)
 

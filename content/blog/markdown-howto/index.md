@@ -14,7 +14,7 @@ Today, my new post will be about markdown texting format.
 
 Headers I think it's the main way to learn how we done in our daily basis.\
 
-``` wp-block-code
+``` text
 # H1
 ## H2
 ### H3
@@ -33,7 +33,7 @@ Alt-H2
 
 Lists - A way to schematic our goals or our tasks.
 
-``` wp-block-code
+``` text
 1. First ordered list item
 2. Another item
 ⋅⋅* Unordered sub-list.
@@ -54,7 +54,7 @@ Lists - A way to schematic our goals or our tasks.
 
 Links - The hyperlinks we can share or inter connect in our documents.
 
-``` wp-block-code
+``` text
 [I'm an inline-style link](https://www.google.com)
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
@@ -85,5 +85,3 @@ Take care. See you soon.
 \[link text itself\]
 
 : http://www.reddit.com
-
-\

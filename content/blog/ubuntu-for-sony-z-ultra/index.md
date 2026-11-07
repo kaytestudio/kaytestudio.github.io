@@ -21,28 +21,22 @@ After that and repo sync:
 
 In terminal too:
 
+``` bash
 sudo adb kill-server
-
 sudo adb start-server
-
 adb devices
-
 adb reboot bootloader
-
- 
-
 sudo fastboot flash boot boot.img
-
 sudo fastboot reboot
+```
 
 Go to recovery and flash Ubuntu with my flasher tool on github.
 
+``` bash
 chmod a+x Ubuntu-rootstock-installer
-
 sudo ./Ubuntu-rootstock-installer Ubuntu-preinstalled.tar.gz system.img
+```
 
 In the end it will reboot, then Ubuntu bootup.
-
- 
 
 The new changes I will test it today and I will release the files too.

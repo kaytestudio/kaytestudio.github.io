@@ -22,11 +22,11 @@ This tells us the algorithm will run one time or in one space-time.
 
 Bool l IsFirstElementNull(IList\<String\> elements)
 
+``` c
 {
-
-    return elements\[0\] == null;
-
+    return elements[0] == null;
 }
+```
 
 O(N)
 
@@ -34,19 +34,15 @@ O(N) describes an algorithm whose performance will grow linearly. And by itself 
 
 bool ContainsValue(IEnumerable\<string\> elements, string value)
 
+``` c
 {
-
-    foreach (var element in elements)
-
-    {
-
-        if (element == value) return true; 
-
-    }     
-
-    return false; 
-
+    foreach (var element in elements)
+    {
+        if (element == value) return true;
+    }
+    return false;
 }
+```
 
 O(N²)
 
@@ -56,40 +52,29 @@ This works well with nested loops. 
 
 bool ContainsDuplicates(IList\<string\> elements)
 
+``` c
 {
-
-    for (var outer = 0; outer \< elements.Count; outer++) 
-
-    {
-
-        for (var inner = 0; inner \< elements.Count; inner++) 
-
-        { 
-
-            // Don't compare with self 
-
-            if (outer == inner) continue;             
-
-            if (elements\[outer\] == elements\[inner\]) return true; 
-
-        }
-
-    }    
-
-    return false;
-
+    for (var outer = 0; outer < elements.Count; outer++)
+    {
+        for (var inner = 0; inner < elements.Count; inner++)
+        {
+            // Don't compare with self
+            if (outer == inner) continue;
+            if (elements[outer] == elements[inner]) return true;
+        }
+    }
+    return false;
 }
+```
 
 O(2^N)
 
 One of the sets we can see is the Fibonacci function. 
 
+``` c
 int Fibonacci(int number)
-
 {
-
-    if (number \<= 1) return number;
-
-    return Fibonacci(number - 2) + Fibonacci(number - 1); 
-
+    if (number <= 1) return number;
+    return Fibonacci(number - 2) + Fibonacci(number - 1);
 }
+```

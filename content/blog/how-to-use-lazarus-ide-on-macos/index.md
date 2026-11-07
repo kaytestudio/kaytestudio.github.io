@@ -12,13 +12,13 @@ Hello readers,
 
 Today, we are going to learn how to use lazarus ide for command line on macOS.
 
-``` wp-block-code
+``` bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 First, you must install brew.sh then do
 
-``` wp-block-code
+``` bash
 brew install fpc lazarus
 ```
 
@@ -26,7 +26,7 @@ brew install fpc lazarus
 
 For us, it's an upgrade not a true installment.
 
-``` wp-block-code
+``` bash
 git clone --recursive https://github.com/ringsce/west.git
 ```
 
@@ -34,7 +34,7 @@ After cloning, open the project inside ringsce-editor intel, then open project1.
 
 ![](Screenshot-2024-01-25-at-09.52.24.png)
 
-``` wp-block-code
+``` text
 compile
 run without debugging
 ```

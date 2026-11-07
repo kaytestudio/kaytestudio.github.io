@@ -12,14 +12,16 @@ Hola Lectores,
 
 Hoy, el tema serán como obtener un servidor centos 9 para desenrollar rpm.
 
+``` bash
 sudo yum install rpm-build
-
 sudo yum install gcc make
+```
 
 Ahora, tenemos que crear un directorio para hacer todo trabajo. Estos ejemplos son con stream.
 
+``` bash
 sudo yum install redhat-rpm-config
-
 mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
+```
 
 Tenemos que crear en el directorio (\$HOME) para prevenir el estropiamento en la "root".

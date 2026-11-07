@@ -20,17 +20,19 @@ I used a folder called example for the instance workaround.
 
 How I done this workaround. I made these few steps on my iTerm2 second tab session.
 
-cd Downloads\
-mkdir example\
-pwd\
-mv example1.zip example\
-mv example2.zip example\
-mv example3.zip example\
-cd example\
-unzip \\.zip\
-ls\
-rm -rf \*.zip\
+``` bash
+cd Downloads
+mkdir example
+pwd
+mv example1.zip example
+mv example2.zip example
+mv example3.zip example
+cd example
+unzip \.zip
 ls
+rm -rf *.zip
+ls
+```
 
 You need always to move the zip files into a directory to get this work.
 

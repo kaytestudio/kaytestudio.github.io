@@ -12,7 +12,7 @@ Hola lectores,
 
 Primero vamos hacer la instalación de brew.sh
 
-``` wp-block-code
+``` bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
@@ -24,7 +24,7 @@ Para nosotros es una actualización.
 
 Ahora tenemos que abrir la carpeta del proyecto.
 
-``` wp-block-code
+``` bash
 git clone --recursive https://github.com/ringsce/west.git
 ```
 
@@ -34,7 +34,7 @@ Abrir el proyecto en la carpeta ringsce-editor y abrir el project1.lpi
 
 Para terminar, pulsar compile y debugging.
 
-``` wp-block-code
+``` text
 compile
 run without debugging
 ```

@@ -14,7 +14,9 @@ I will show it how I made it on my MBP 2011. First of all, I made already in Pyt
 
 1:
 
-→ vue create name_of_the_project
+``` bash
+vue create name_of_the_project
+```
 
 → choose vuejs3
 
@@ -40,77 +42,44 @@ One called Menu.vue and the other as Footer.vue
 
 inside Menu.vue type this lines of code
 
-\<template\>
-
-\<header\>
-
-\</header\>
-
-\</template\>
-
-\<script\>
-
+``` html
+<template>
+<header>
+</header>
+</template>
+<script>
 import { defineComponent } from '@vue/composition-api'
-
 export default defineComponent({
-
 setup() {
-
 },
-
 })
-
-\</script\>
-
-\<style scoped\>
-
+</script>
+<style scoped>
 header {
-
 background-color: bluebird;
-
 padding: 10px;
-
 }
-
-\</style\>
-
+</style>
 Inside Footer.vue
-
-\<template\>
-
-\<footer\>
-
-\<p\>(C) Copyright Brand 2020\</p\>
-
-\</footer\>
-
-\</template\>
-
-\<script\>
-
+<template>
+<footer>
+<p>(C) Copyright Brand 2020</p>
+</footer>
+</template>
+<script>
 import { defineComponent } from '@vue/composition-api'
-
 export default defineComponent({
-
 setup() {
-
 },
-
 })
-
-\</script\>
-
-\<style scoped\>
-
+</script>
+<style scoped>
 footer {
-
 background-color: blue;
-
 padding: 10px;
-
 }
-
-\</style\>
+</style>
+```
 
 on the vs code type yarn serve to see what it happens. If shows a few lines to see localhost. You are ready to go. Next article I will teach how to manage components and bootstrap next which is bootstrap 5. This first part is a basic tutorial, not an in-depth tutorial that I have in mind.
 
@@ -124,13 +93,12 @@ I started to code vuejs3 in December after coding ecmascript5 and 6 under the ho
 
 To do this we must have part1 done. The majority of things we will hack are on the top of the vuejs3 part 1. If you didn’t do part1 we cannot understand the hacking. But I will explain again part 1 here. Under as a part 2. This part 2 will be delivered as an ebook pdf for kindle and kobo devices. This magazine coder by gleentech delivered by Gleentech Solutions and kreatyve Designs will give techniques about coding and operating systems such as MacOS, FreeBSD and Linux. We will see deployments of those OS’es under Parallels use. I will teach how to manage them with some tutorials under VMs. As a coder, I rather use Parallels Inc instead of Oracle VB and VMWare Inc. These last ones in my opinion are not so optimized for macOS or even Apple structure. So much consumption. This magazine will give some new approaching techniques to optimize your machines, trying to get rid of Kubernetes or even docker-compose. I had some issues with those applications for composing and containerizing them. It made my battery go. So I needed to switch for a new battery around 2 years ago.
 
-→ vue create nameofproject
-
-→ choose vue3 babel / eslint
-
-→ cd nameofproject
-
-→ yarn serve
+``` bash
+vue create nameofproject
+choose vue3 babel / eslint
+cd nameofproject
+yarn serve
+```
 
 I will explain later what is it babel and eslint. These two come as a bundle for yarn serve to debug our web applications.
 
@@ -140,61 +108,45 @@ Eslint is a javascript tool to debug our own code, we can make npm test or run t
 
 When we do
 
-→ yarn build
+``` bash
+yarn build
+```
 
 We build a ‘dist’ folder with all the website, and components inside to be delivered. With eslint we can test with eval commands to see what is happening with our code. I think the worst scenario is to delete the folder and copy everything into the back. Sometimes when we are learning the worst scenario is to delete all the folders and code everything back on.
 
-→ rm -rf foldername
-
-→ vue create foldername
-
-→ cd foldername
-
-→ yarn serve
+``` bash
+rm -rf foldername
+vue create foldername
+cd foldername
+yarn serve
+```
 
 Now I am going to teach how to hack a simple vuejs3 application.
 
 First of all, type the before commands then follow what I am writing.
 
-→ cd foldername
-
-→ rename HelloWorld.vue to Index.vue
-
-→ \<HelloWorld msg="Welcome to Your Vue.js App"/\>
-
-→ rename it to \<Home msg="Welcome to Your Vue.js App"/\>
-
-→ \<script\>
-
+``` html
+cd foldername
+rename HelloWorld.vue to Index.vue
+<HelloWorld msg="Welcome to Your Vue.js App"/>
+rename it to <Home msg="Welcome to Your Vue.js App"/>
+<script>
 import Home from './components/Index.vue'
-
 //import Footer from './components/Footer.vue'
-
 //import Header from '.components/Header.vue'
-
 export default {
-
 name: 'App',
-
 components: {
-
 Home
-
 }
-
 }
-
-\</script\>
-
+</script>
 Under this script rename
-
-→ import HelloWorld from './components/HelloWorld.vue'
-
+import HelloWorld from './components/HelloWorld.vue'
 to
-
-→ import Home from './components/Index.vue'
-
-→ yarn serve
+import Home from './components/Index.vue'
+yarn serve
+```
 
 Now you can see a logo and a page.
 

@@ -16,7 +16,9 @@ First call the terminal:
 
 Then type md5:
 
+``` bash
 md5 debian-12.1.0-amd64-DVD-1.iso
+```
 
 ![](Screenshot-2023-11-10-at-14.21.25.png)
 

@@ -14,13 +14,13 @@ Hoy, Tenemos una build con gtk3+ y cmake en Big Sur ordenador.
 
 Primero:
 
-``` wp-block-code
+``` bash
 git clone https://github.com/ringsce/morpheus
 ```
 
 Entonces:
 
-``` wp-block-code
+``` bash
 cd morpheus && cd gtk
 ```
 
@@ -30,7 +30,7 @@ Después:
 
 Ahora:
 
-``` wp-block-code
+``` bash
 mkdir build && cd build
 cmake ../
 make
@@ -40,7 +40,7 @@ Por fin:
 
 ![](Screenshot-2023-10-10-at-13.08.54.png)
 
-``` wp-block-code
+``` bash
 open neon
 ```
 

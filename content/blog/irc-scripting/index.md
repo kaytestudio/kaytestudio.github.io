@@ -12,7 +12,7 @@ Hello, it's coder by gleentech again. Today we are going to talk about kvirc IRC
 
 The following code is the script itself.
 
-``` wp-block-code
+``` bash
 alias(j){ join $0-; };
 j  #plv
 echo This is me
@@ -69,11 +69,11 @@ event (OnIRC, banning)
 
 First of all, we must do two things before seeing the script.
 
-``` wp-block-code
+``` bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-``` wp-block-code
+``` bash
 brew install kvirc
 ```
 

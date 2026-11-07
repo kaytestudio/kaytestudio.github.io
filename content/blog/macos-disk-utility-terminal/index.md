@@ -14,13 +14,17 @@ This tool is very useful for system administrators.
 
 First of all, we will learn how to erase dvd-rw.
 
+``` bash
 hdiutil burn -erase
+```
 
 ![](Screenshot-2023-02-24-at-13.10.04.png)
 
 Now, we will see how to record a dvd-rw.
 
-hdiutil burn name_of\_.iso
+``` bash
+hdiutil burn name_of_.iso
+```
 
 ![](Screenshot-2023-02-24-at-13.32.00.png)
 

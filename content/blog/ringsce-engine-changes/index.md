@@ -20,7 +20,7 @@ As we all can see the improvements for the engine. The next pie chart you can se
 
 ![](mermaid-diagram-2024-02-27-081733-1.png)
 
-``` wp-block-code
+``` bash
 git clone --recursive https://github.com/ringsce/west.git
 ```
 

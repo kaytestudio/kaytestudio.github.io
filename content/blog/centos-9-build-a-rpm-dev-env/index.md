@@ -12,14 +12,16 @@ Hello readers,
 
 Today we are going to see how to build an rpm dev environment.
 
+``` bash
 sudo yum install rpm-build
-
 sudo yum install gcc make
+```
 
 Now, we are going to build a directory to work with an rpm building. In the next article, we will learn how to build and install an rpm on the centOS 9 stream.
 
+``` bash
 sudo yum install redhat-rpm-config
-
 mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
+```
 
 We must build on the (\$HOME) directory to avoid damage on the fly under the installment of the centOS 9. In the next article, we will learn how to build an rpm package under the \$HOME folder.

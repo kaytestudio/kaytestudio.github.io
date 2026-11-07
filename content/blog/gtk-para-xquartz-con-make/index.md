@@ -14,13 +14,15 @@ Hoy, tenemos una cosa más, como hacer compilación con make en tú Apple.
 
 Como ha visto antes, tenemos esto comando:
 
-gcc \`pkg-config --cflags gtk+-3.0\` -o example-0 mainwindow.cc \`pkg-config --libs gtk+-3.0\`
+``` bash
+gcc `pkg-config --cflags gtk+-3.0` -o example-0 mainwindow.cc `pkg-config --libs gtk+-3.0`
+```
 
 <https://gist.github.com/vic3t3chn0/313707f0372c6b89ac598181716060b4>
 
 Para empezar, creamos un fichero con tu terminal llamado Makefile, tenemos también un gist:
 
-``` wp-block-code
+``` bash
 all:
     world
 
@@ -33,7 +35,7 @@ world:
 
 Ahora tenemos el mismo codigo fuente del aticulo de gtk con XQuartz.
 
-``` wp-block-code
+``` c
 #include <gtk/gtk.h>
 
 static void

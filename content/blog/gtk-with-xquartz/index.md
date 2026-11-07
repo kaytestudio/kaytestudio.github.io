@@ -14,7 +14,9 @@ We are going to learn how to compile gtk3 for XQuartz on big sur.
 
 To compile use this:
 
-gcc \`pkg-config --cflags gtk+-3.0\` -o example-0 mainwindow.cc \`pkg-config --libs gtk+-3.0\`
+``` bash
+gcc `pkg-config --cflags gtk+-3.0` -o example-0 mainwindow.cc `pkg-config --libs gtk+-3.0`
+```
 
 But first, open my gtk gist:
 
@@ -22,7 +24,7 @@ But first, open my gtk gist:
 
 But you can test it like this:
 
-``` wp-block-code
+``` c
 #include <gtk/gtk.h>
 
 static void
@@ -55,7 +57,7 @@ main (int    argc,
 
 in the end:
 
-``` wp-block-code
+``` bash
  gcc `pkg-config --cflags gtk+-3.0` -o example-0 mainwindow.cc `pkg-config --libs gtk+-3.0`
 ```
 

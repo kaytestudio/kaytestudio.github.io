@@ -12,7 +12,9 @@ Hello readers,
 
 Today, we came to deliver one more article about POSIX. We are going to teach how to enable web dashboard on CentOS 9 stream.
 
+``` bash
 sudo systemctl enable --now cockpit.socket
+```
 
 ![](Screenshot-2023-02-04-at-11.02.20.png) ![](Screenshot-2023-02-04-at-11.11.26.png) ![](Screenshot-2023-02-04-at-11.10.05.png)
 

@@ -12,25 +12,16 @@ Hello everyone!
 
 Today I will be talking about ELF, a format used well used nowadays on micro technology although on open systems already in use on the market.
 
-\<code\>
-
-\#include \<stdio\>
-
-\#include \<iostream\>
-
+``` c
+#include <stdio>
+#include <iostream>
 int main()
-
 {
-
 printf("hello world\n");
-
 return 0;
-
 }
-
-\</code\>
-
 gcc -o main.c a.out
+```
 
 This is our example to use and verify ELF format. It's a format used since 1999, as a standard. It can be called a standardisation.
 
@@ -38,10 +29,10 @@ With ELF we can, debug, study how the behaviour of the system have under the CPU
 
 In Linux if you want to have a describe style for the format, you can run this command on the terminal or in MacOS (Terminal or iTerm2)
 
-\<code\>
+``` bash
+file a.out
+```
 
-file a.out or the name you gave file main.out
-
-\</code\>
+or the name you gave: `file main.out`
 
 To make use of debugging under ELF format is useful to study how the Operating System behaves. Perhaps the libraries are built or their behave too.

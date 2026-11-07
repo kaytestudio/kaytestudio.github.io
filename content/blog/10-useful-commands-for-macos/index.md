@@ -18,7 +18,9 @@ For the cat filename.sh, you need to edit the file on a text editor and type:
 
 \#!/usr/bin/sh
 
+``` bash
 echo "hello world"
+```
 
 ![](Screenshot-2023-01-01-at-11.19.13.png)
 

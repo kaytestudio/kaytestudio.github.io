@@ -8,7 +8,6 @@ tags = ["codermag archive"]
 originalUrl = "https://codermag.gleentech.com/2024/05/16/ringsce-1/"
 +++
 
-``` markdown
 # Using Git for Version Control and RingsCE Tools for Pascal Game Development
 
 ## Introduction

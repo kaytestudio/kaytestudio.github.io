@@ -22,7 +22,7 @@ Ahora:
 
 ![](Screenshot-2024-01-08-at-09.44.19.png)
 
-``` wp-block-code
+``` text
 mulle-xcode-to-cmake -b export shadow.xcodeproj > CMakeLists.txt
 ```
 
@@ -30,7 +30,7 @@ mulle-xcode-to-cmake -b export shadow.xcodeproj > CMakeLists.txt
 
 Ahora es un "boilerplate", que necesita de hacer cambios.
 
-``` wp-block-code
+``` bash
 mkdir build && cd build
 cmake ../
 make
@@ -38,7 +38,7 @@ make
 
 Cada vez que hacemos de cambio, tenemos que actualizar el CMakeLists.txt para cada "build", tenemos que hacer siempre
 
-``` wp-block-code
+``` bash
 cd .. 
 rm -rf build
 mkdir build && cd build

@@ -16,19 +16,16 @@ Primero:
 
 ![](Screenshot-2023-04-01-at-09.23.59.png)
 
-``` wp-block-preformatted
 Vamos a crear una carpeta de conjunto de iconos:
-```
 
 ![](Screenshot-2023-04-01-at-09.25.23.png)
 
-``` wp-block-preformatted
 Ahora, usemos un script de código para trabajar, es una correción que encontré:
-```
 
+``` bash
 mkdir icon.iconset
-
 output_path=~/Projects/ringsce/icon.iconset
+```
 
 \# the convert command comes from imagemagick\
 for size in 16 32 64 128 256; do\
@@ -37,9 +34,11 @@ convert RINGSCE_V2.png -resize x\$size \$output_path/icon\_\${size}x\${size}.png
 convert RINGSCE_V2.png -resize x\$size \$output_path/icon\_\${half}x\${half}@2x.png\
 done
 
-iconutil -c icns \$output_path
+``` bash
+iconutil -c icns $output_path
+```
 
-``` wp-block-preformatted
+``` text
 Ahora, vamos a ejecutar este script.
 ```
 

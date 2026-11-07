@@ -12,22 +12,22 @@ originalUrl = "https://codermag.gleentech.com/2019/09/27/odroid-esp-idf-part-2/"
 
 In this part i will explain how to develop firmware for Odroid Go with an esp32 arduino builtin.
 
-``` wp-block-preformatted
+``` bash
 git clone https://github.com/othercrashoverride/odroid-go-firmware.git -b factory
 cd odroid-go-firmware/tools/mkfw
 make
 ```
 
-``` wp-block-preformatted
+``` bash
 sudo apt install ffmpeg
 ffmpeg -i 86x48px-Arduino_Logo.png -f rawvideo -pix_fmt rgb565 tile.raw
 ```
 
-``` wp-block-preformatted
+``` bash
 ./mkfw test tile.raw 0 16 1048576 app Hello_World.ino.bin
 ```
 
-``` wp-block-preformatted
+``` bash
 mv firmware.fw Hello_World.fw
 ```
 
@@ -35,13 +35,13 @@ Press on B button while is off, then press on while B button is being pressed, t
 
 Make a data folder in \*.bin
 
-``` wp-block-preformatted
+``` text
 mkspiffs -c ./data -b 4096 -p 256 -s 0x100000 spiffs.bin
 ```
 
 Two projects in the same \*.bin
 
-``` wp-block-preformatted
+``` bash
 ./mkfw test tile.raw 0 16 1048576 app Weather_Station.ino.bin 1 130 1048576 "spiffs" spiffs.bin
 cp firmware.fw Weather_Station.fw
 ```

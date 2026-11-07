@@ -16,25 +16,34 @@ originalUrl = "https://codermag.gleentech.com/2022/04/23/what-is-zfs-2/"
 
 *First of all, as we saw before, about the ports, we cannot delete the structure. If you try to do :*
 
-→ *sudo rm -rf /usr/ports*
+``` bash
+sudo rm -rf /usr/ports
+```
 
 *You will see a device busy. I will teach how to bypass that issue.*
 
-→ *sudo fstat \| grep "/usr/ports"*
+``` bash
+sudo fstat | grep "/usr/ports"
+```
 
 *But first you should know you cannot delete it. Before I will explain the ZFS itself do this command when you try to delete ports folder.*
 
-→ *sudo svnlite co https://svn.freebsd.org/ports/head /usr/ports*
+``` bash
+sudo svnlite co https://svn.freebsd.org/ports/head /usr/ports
+```
 
 *If this syncing broke up or hang up, we can always do this:*
 
-→ *sudo rm -rf /usr/ports/\* && sudo rm -rf /usr/ports/.svn*
+``` bash
+sudo rm -rf /usr/ports/ && sudo rm -rf /usr/ports/.svn*
+```
 
 → *or do these commands  separately.*
 
-→ *sudo rm -rf /usr/ports/\**
-
-→ *sudo rm -rf /usr/ports/.svn*
+``` bash
+sudo rm -rf /usr/ports/*
+sudo rm -rf /usr/ports/.svn
+```
 
 *I think you can’t now use anymore the subversion stable. I keep seeing most the help outside from git freebsd hosting.*
 

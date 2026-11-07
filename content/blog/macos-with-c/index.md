@@ -22,11 +22,11 @@ You must have a directory and a cmake like this one:
 
 Next, on terminal do this:
 
--\> mkdir build && cd build
-
--\> cmake ../
-
--\> make
+``` bash
+mkdir build && cd build
+cmake ../
+make
+```
 
 After setting up all of this run make.
 

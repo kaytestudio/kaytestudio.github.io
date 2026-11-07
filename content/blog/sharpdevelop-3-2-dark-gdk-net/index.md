@@ -22,8 +22,6 @@ For instance DarkGDK, DGDKLib. You must make to get the code done and built.
 
 I'm here to help. So, any doubt I will try to give an answer soon as possible.
 
- 
-
 Code Snippet Cllass1.cs:\
 /\* Criado por SharpDevelop.\
 \* Utilizador: astro\
@@ -34,110 +32,97 @@ Code Snippet Cllass1.cs:\
 \*/\
 using System;
 
-namespace GDKCs.Properties\
-{\
-/// \<summary\>\
-/// Description of Class1.\
-/// \</summary\>\
-public class Class1\
-{\
-//variables\
-private static Boolean LeftMouseDown;\
-private static Boolean\[\] KeyDown = new Boolean\[104\];\
+``` csharp
+namespace GDKCs.Properties
+{
+/// <summary>
+/// Description of Class1.
+/// </summary>
+public class Class1
+{
+//variables
+private static Boolean LeftMouseDown;
+private static Boolean[] KeyDown = new Boolean[104];
 private static int lastScanCode;
-
-public static void SetupKeyEvents() // Must be called once before any of the following functions\
+public static void SetupKeyEvents() // Must be called once before any of the following functions
 {
-
-for (int i = 0; i \<= KeyDown.Length; i++)\
-KeyDown\[i\] = false;\
-}\
-public static Boolean SingleKeyPress(DarkGDK.IO.Keys kKey)\
+for (int i = 0; i <= KeyDown.Length; i++)
+KeyDown[i] = false;
+}
+public static Boolean SingleKeyPress(DarkGDK.IO.Keys kKey)
 {
-
-if (DarkGDK.IO.Keyboard.State(kKey) && !KeyDown\[DarkGDK.IO.Keyboard.ScanCode\])\
-{\
-KeyDown\[DarkGDK.IO.Keyboard.ScanCode\] = true;\
-lastScanCode = DarkGDK.IO.Keyboard.ScanCode;\
-return true;\
-}\
-else if (DarkGDK.IO.Keyboard.ScanCode == 0) // Means we aren't pressing any key 🙂\
-{\
-KeyDown\[lastScanCode\] = false;\
-return false;\
-}\
-else\
-return false;\
+if (DarkGDK.IO.Keyboard.State(kKey) && !KeyDown[DarkGDK.IO.Keyboard.ScanCode])
+{
+KeyDown[DarkGDK.IO.Keyboard.ScanCode] = true;
+lastScanCode = DarkGDK.IO.Keyboard.ScanCode;
+return true;
 }
-
-public static Boolean SingleLeftClick()\
-{\
-if (DarkGDK.IO.Mouse.LeftClick && !LeftMouseDown)\
-{\
-LeftMouseDown = true;\
-return true;\
-}\
-else if (!DarkGDK.IO.Mouse.LeftClick)\
-{\
-LeftMouseDown = false;\
-return false;\
-}\
-return false;\
+else if (DarkGDK.IO.Keyboard.ScanCode == 0) // Means we aren't pressing any key 🙂
+{
+KeyDown[lastScanCode] = false;
+return false;
 }
-
+else
+return false;
+}
+public static Boolean SingleLeftClick()
+{
+if (DarkGDK.IO.Mouse.LeftClick && !LeftMouseDown)
+{
+LeftMouseDown = true;
+return true;
+}
+else if (!DarkGDK.IO.Mouse.LeftClick)
+{
+LeftMouseDown = false;
+return false;
+}
+return false;
+}
 public void NGame(){
-
 }
-
-public void LGame()\
+public void LGame()
 {
-
 }
-
-public void OGame()\
-{\
-}\
-public void OptGame()\
-{\
-}\
-public void qGame(){\
-System.Environment.Exit(1);\
+public void OGame()
+{
 }
-
-public void Menu()\
-{\
-do\
-{\
-int c = 1;\
-switch(c){\
-case '1': Console.Write("New Game\n");\
-break;\
-case '2': Console.Write("Load Game\n");\
-break;\
-case '3': Console.Write("Online Game\n");\
-break;\
-case '4': Console.Write("Options\n");\
-break;\
-case '5': qGame();\
-break;\
-default: Console.Write("Error... Quitting\n");\
-break;\
+public void OptGame()
+{
 }
-
+public void qGame(){
+System.Environment.Exit(1);
+}
+public void Menu()
+{
+do
+{
+int c = 1;
+switch(c){
+case '1': Console.Write("New Game\n");
+break;
+case '2': Console.Write("Load Game\n");
+break;
+case '3': Console.Write("Online Game\n");
+break;
+case '4': Console.Write("Options\n");
+break;
+case '5': qGame();
+break;
+default: Console.Write("Error... Quitting\n");
+break;
+}
 }while(true);
-
 }
-
-public Class1()\
-{\
-}\
-}\
+public Class1()
+{
 }
+}
+}
+```
 
 ![example](example.jpg)
 
 ![example_reference](example_reference.jpg)T
-
- 
 
 Thank you so much.

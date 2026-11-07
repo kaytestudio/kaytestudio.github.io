@@ -12,23 +12,21 @@ In due my case studies with OpenGL, WebGL and Vulkan API. In the last years and 
 
 I found a reasonable tool called Jo-Saturn. I was playing around and still do it.
 
-\#include \<jo/jo.h\>
-
-enum\
-
+``` c
+#include <jo/jo.h>
+enum
 [TABLE]
-
-void            my_draw(void)\
-{\
-    jo_sprite_draw3D(0, 0, 0, 500);\
+void            my_draw(void)
+{
+    jo_sprite_draw3D(0, 0, 0, 500);
 }
-
-void            jo_main(void)\
-{\
-    jo_core_init(JO_COLOR_Black);\
-    jo_sprite_add_tga("TEX", "A.TGA", JO_COLOR_Transparent);\
-    jo_core_add_callback(my_draw);\
-    jo_core_run();\
+void            jo_main(void)
+{
+    jo_core_init(JO_COLOR_Black);
+    jo_sprite_add_tga("TEX", "A.TGA", JO_COLOR_Transparent);
+    jo_core_add_callback(my_draw);
+    jo_core_run();
 }
+```
 
 See you soon for a Gameboy Advance and another one about spectrum.\

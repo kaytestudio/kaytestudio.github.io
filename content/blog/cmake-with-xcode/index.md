@@ -22,7 +22,7 @@ Now:
 
 ![](Screenshot-2024-01-08-at-09.44.19.png)
 
-``` wp-block-code
+``` text
 mulle-xcode-to-cmake -b export shadow.xcodeproj > CMakeLists.txt
 ```
 
@@ -30,7 +30,7 @@ mulle-xcode-to-cmake -b export shadow.xcodeproj > CMakeLists.txt
 
 It's now a boilerplate for your needs, you must now add source code to the build.
 
-``` wp-block-code
+``` bash
 mkdir build && cd build
 cmake ../
 make
@@ -38,7 +38,7 @@ make
 
 Every time you do changes, don't forget to update CMakeLists.txt for your build, everytime you change do this
 
-``` wp-block-code
+``` bash
 cd .. 
 rm -rf build
 mkdir build && cd build

@@ -30,9 +30,7 @@ Press Return carrier ( Enter)
 
 ![](Screenshot-2023-02-24-at-09.18.46.png)
 
-``` wp-block-preformatted
 Ahora, regrese al comando top para ver si el servicio se ha ido.
-```
 
 ![](Screenshot-2023-02-24-at-09.20.08.png)
 

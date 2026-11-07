@@ -12,7 +12,7 @@ Hello readers,
 
 Today we are going to learn how to use mermaid.js for pie and chart graphics with markdown pages.
 
-``` wp-block-code
+``` text
 flowchart TD
     A[ringsCE] -->|WIP| B(Initial)
     B --> C{Folders}
@@ -23,7 +23,7 @@ flowchart TD
 
 ![](mermaid-diagram-2024-02-08-085310.png)
 
-``` wp-block-code
+``` text
 pie title ringsce adopted by kd
     "arm": 10
     "c++": 30

@@ -14,7 +14,7 @@ En este tutorial tenemos 4 comandos como ejemplo.
 
 Para hacerlo, tenemos que hacer un clone o fork de un repo que kreatyve designs tiene en github.
 
-``` wp-block-code
+``` bash
 git clone https://github.com/ringsce/west.git
 ```
 
@@ -24,13 +24,13 @@ Ahora tenemos que que abrir el fichero README.md
 
 ![](Screenshot-2024-01-18-at-08.35.08-1.png) ![](Screenshot-2024-01-18-at-08.36.36-2.png)
 
-``` wp-block-code
+``` bash
 poner este codigo en README.md
 ## Site
 MMO sign up website
 ```
 
-``` wp-block-code
+``` bash
 git add .
 git commit -m "added website for sign up"
 git push -u --force
@@ -40,7 +40,7 @@ Después tenemos el fork
 
 ![](Screenshot-2024-01-18-at-08.40.44-1.png)
 
-``` wp-block-code
+``` bash
 mkdir test && cd test
 git clone --recursive https://github.com/ringsce/west.git
 ```

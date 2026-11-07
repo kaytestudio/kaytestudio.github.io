@@ -8,7 +8,6 @@ tags = ["codermag archive"]
 originalUrl = "https://codermag.gleentech.com/2024/06/27/ringsce-1-en-castellano/"
 +++
 
-``` markdown
 # Uso de Git para Control de Versiones y Herramientas RingsCE para Desarrollo de Juegos en Pascal
 
 ## Introducción

@@ -14,13 +14,15 @@ Today, we bring with more tips, how to compile with make with your Apple.
 
 As we seen before, we have this command:
 
-gcc \`pkg-config --cflags gtk+-3.0\` -o example-0 mainwindow.cc \`pkg-config --libs gtk+-3.0\`
+``` bash
+gcc `pkg-config --cflags gtk+-3.0` -o example-0 mainwindow.cc `pkg-config --libs gtk+-3.0`
+```
 
 <https://gist.github.com/vic3t3chn0/313707f0372c6b89ac598181716060b4>
 
 To start, we must create a file called Makefile, we have a gist above also:
 
-``` wp-block-code
+``` bash
 all:
     world
 
@@ -33,7 +35,7 @@ world:
 
 Now we have the same source code seen before about GTK.
 
-``` wp-block-code
+``` c
 #include <gtk/gtk.h>
 
 static void

@@ -22,11 +22,11 @@ Segundo tener un fichero de cmake como esto y un directorio como esto:
 
 Tercero, en el terminal hacer esto:
 
--\> mkdir build && cd build
-
--\> cmake ../
-
--\> make
+``` bash
+mkdir build && cd build
+cmake ../
+make
+```
 
 Después puedes compilar la aplicación.
 

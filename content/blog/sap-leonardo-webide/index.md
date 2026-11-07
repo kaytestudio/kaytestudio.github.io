@@ -19,9 +19,3 @@ To learn for me is trying to hack or do a hackathon behind the glance of the bea
 In the following article I will show how I done it or I tried it to be successful.
 
 I got a weird file. Attached with this article relied on sapui5.
-
-\
-
-\
-
-\

@@ -14,7 +14,9 @@ I will show it how I made it on my MBP 2011. First of all, I made already in Pyt
 
 1:
 
-→ vue create name_of_the_project
+``` bash
+vue create name_of_the_project
+```
 
 → choose vuejs3
 
@@ -40,77 +42,44 @@ One called Menu.vue and the other as Footer.vue
 
 inside Menu.vue type this lines of code
 
-\<template\>
-
-\<header\>
-
-\</header\>
-
-\</template\>
-
-\<script\>
-
+``` html
+<template>
+<header>
+</header>
+</template>
+<script>
 import { defineComponent } from '@vue/composition-api'
-
 export default defineComponent({
-
 setup() {
-
 },
-
 })
-
-\</script\>
-
-\<style scoped\>
-
+</script>
+<style scoped>
 header {
-
 background-color: bluebird;
-
 padding: 10px;
-
 }
-
-\</style\>
-
+</style>
 Inside Footer.vue
-
-\<template\>
-
-\<footer\>
-
-\<p\>(C) Copyright Brand 2020\</p\>
-
-\</footer\>
-
-\</template\>
-
-\<script\>
-
+<template>
+<footer>
+<p>(C) Copyright Brand 2020</p>
+</footer>
+</template>
+<script>
 import { defineComponent } from '@vue/composition-api'
-
 export default defineComponent({
-
 setup() {
-
 },
-
 })
-
-\</script\>
-
-\<style scoped\>
-
+</script>
+<style scoped>
 footer {
-
 background-color: blue;
-
 padding: 10px;
-
 }
-
-\</style\>
+</style>
+```
 
 On the vs code type yarn serve to see what it happens. If shows a few lines to see localhost. You are ready to go. Next article I will teach how to manage components and bootstrap next which is bootstrap 5. This first part is a basic tutorial, not an in-depth tutorial which I have in mind.
 

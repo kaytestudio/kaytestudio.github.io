@@ -22,7 +22,9 @@ Remember the IP you enter on the ssh it's shown here with ip a.
 
 The command works like this the ssh
 
+``` bash
 ssh user@ip -p 22
+```
 
 eg: ssh user@10.211.55.18 -p 22
 

@@ -14,7 +14,9 @@ Bienvenidos al primero artículo del mes de coder by gleentech Labs.
 
 Aquí la búsqueda de podman en macos ordenadora.
 
+``` bash
 brew install podman-desktop
+```
 
 ![](Screenshot-2023-02-24-at-14.53.50.png)
 
@@ -26,16 +28,22 @@ Ahora, la tarea es crear una imagen en podman.
 
 Este comando en tu terminal tiene una lista de ordenadores virtuales.
 
-podman machine list\
+``` bash
+podman machine list
 podman machine stop
+```
 
 ![](Screenshot-2023-02-24-at-15.03.43.png)
 
-podman machine rm\
+``` bash
+podman machine rm
 podman machine init
+```
 
 ![](Screenshot-2023-02-24-at-15.06.36.png)
 
+``` bash
 podman machine start
+```
 
 ![](Screenshot-2023-02-24-at-15.12.09.png) ![](Screenshot-2023-02-24-at-15.13.04.png)

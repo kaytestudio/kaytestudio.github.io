@@ -10,7 +10,6 @@ originalUrl = "https://codermag.gleentech.com/2024/09/10/kayte-lang/"
 
 ![](kayte-lang.webp)
 
-``` markdown
 # Kayte Lang PoC: A New Programming Language for Custom Applications
 
 **Kayte Lang** is a lightweight and dynamic programming language designed for flexibility and efficiency. The language aims to simplify application development by offering a minimalistic yet powerful syntax for both logic and UI components. This article presents the Proof of Concept (PoC) version of Kayte Lang and its core features, showcasing its potential for building modern applications.

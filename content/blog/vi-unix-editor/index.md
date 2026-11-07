@@ -12,7 +12,7 @@ This tutorial is to teach how to use vi the editor, the common on every Unix-lik
 
 1.  More On Cursor Movement
 
-``` wp-block-preformatted
+``` text
 From Command Mode
 
     e    Move to end of current word
@@ -59,7 +59,7 @@ From Command Mode
     %         Move to matching bracket:  ( { [ ] } )
 ```
 
-``` wp-block-preformatted
+``` text
 2 - Text Mode:
 From Command Mode
 
@@ -79,7 +79,7 @@ From Command Mode
 
 3 - Commands & Objects
 
-``` wp-block-preformatted
+``` text
     Format                         Example
 
       operator number object          c2w

@@ -16,7 +16,9 @@ We are going to learn how to use SSH on a FreeBSD 14.1 ARM64 system running with
 
 As you can see you must use:
 
-    ifconfig -a
+``` bash
+ifconfig -a
+```
 
 This will prompt you to an IP address. For me on my network gave this IP address.
 

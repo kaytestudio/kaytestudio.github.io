@@ -16,15 +16,17 @@ Esta herramienta es muy útil para los administradores de sistemas.
 
 En primer lugar, aprenderemos a borrar un dvd-rw.
 
+``` bash
 hdiutil burn -erase
+```
 
 ![](Screenshot-2023-02-24-at-13.10.04.png)
 
-``` wp-block-preformatted
 Ahora, veremos cómo grabar un dvd-rw.
-```
 
-hdiutil burn name_of\_.iso
+``` bash
+hdiutil burn name_of_.iso
+```
 
 ![](Screenshot-2023-02-24-at-13.32.00.png)
 

@@ -12,7 +12,7 @@ Today, we are going to learn how to use cmake for freepascal on a macOS.
 
 ![](Screenshot-2024-02-15-at-08.39.26.png)
 
-``` wp-block-code
+``` bash
 cmake_minimum_required(VERSION 3.8)
 project(ringsce)
 
@@ -100,7 +100,7 @@ add_custom_command(
 
 ![](Screenshot-2024-02-15-at-08.41.50.png)
 
-``` wp-block-code
+``` bash
 mkdir build && cd build
 cd build
 cmake ../

@@ -16,7 +16,7 @@ Hoy nosotros tenemos en una aplicación esto:
 
 Nuestra aplicación para tenermos actual, nosotros hacemos una modificación.
 
-``` wp-block-code
+``` text
 objectVersion = 56;
 para
 objectVersion = 50;

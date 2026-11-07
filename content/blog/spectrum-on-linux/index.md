@@ -12,19 +12,15 @@ Today i will talk about spectrum development on Red Hat and Fedora 30.
 
 First of all I will teach how to install the software through the repositories.
 
-\<code\>
-
+``` bash
 sudo dnf install z80asm
-
-\</code\>
+```
 
 Next step will be to install the spectrum Unix emulator called fuse-emulator-gtk.
 
-\<code\>
-
+``` bash
 sudo dnf install fuse-emulator
-
-\</code\>
+```
 
 With this way we can now, code basic for spectrum or z80 assembly.
 
@@ -34,50 +30,28 @@ create a directory development folder called projects/spectrum
 
 Before this on your home directory:
 
-\<code\>
-
+``` bash
 vi ~/.vimrc
-
 syntax on
-
 :wq
-
-\</code\>
-
-\<code\>
-
 mkdir -p ~/projects/spectrum
-
 touch ~/projects/spectrum/hello.asm
-
 vi ~/projects/spectrum/hello.asm
+```
 
 write this code or copy paste it:
 
+``` nasm
 ;Sample print at program
-
 ORG 32768
-
 LD A,2
-
 CALL 5633
-
 LD DE,string
-
 LD BC,eostring-string
-
 CALL 8252
-
 RET
-
 string: DEFB 22,0,11,"Hello World"
-
-eostring: equ \$
-
+eostring: equ $
 For compilation a asm file from z80 spectrum code type this:
-
-\<code\>
-
 z80asm -o hello.bin hello.asm
-
-\</code\>
+```

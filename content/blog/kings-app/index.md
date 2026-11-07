@@ -12,13 +12,13 @@ Hello,
 
 Today we are going to talk about kings app framework for ringsCE mirror websites, with this source code you can make mirrors or even forks from the orginal code.
 
-``` wp-block-code
+``` bash
 git clone https://github.com/ringsce/kings.git
 ```
 
 Open the folder with vs code on your mac:
 
-``` wp-block-code
+``` bash
 cd kings && code .
 ```
 

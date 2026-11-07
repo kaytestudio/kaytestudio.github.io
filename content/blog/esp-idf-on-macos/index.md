@@ -14,7 +14,9 @@ Today, we are going to learn how to install esp-idf on macOS.
 
 But first to compile the toolchain before that, we must install by brewing the following items on terminal or iTerm2
 
+``` bash
 brew install cmake ninja dfu-util
+```
 
 ![](Screenshot-2023-01-17-at-12.08.23.png)
 

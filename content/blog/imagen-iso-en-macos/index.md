@@ -22,5 +22,7 @@ Después, clicar en el File. New as image.
 
 Por fin, en el terminal hacer el proximo comando en la cli.
 
-cd Downloads\
+``` bash
+cd Downloads
 hdiutil makehybrid -iso -joliet -o -FILENAME.iso FILENAME.cdr
+```

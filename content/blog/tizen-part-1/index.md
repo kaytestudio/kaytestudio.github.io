@@ -38,17 +38,18 @@ I have installed tizen ide and an ubuntu for coding. I am using a MacBook Pro. S
 
 After the instalment I could boot it up. Make a warm bootup qemu image and its ide. I built a calculator to see how it works an app functioning system. Over 8 years to 9 years being part of tizen organization. I came to write about web apps and code kernel for samsung devices. I was almost a ghost, now I am ready to talk about tizen. This operating system is openness and from Linux Foundation and Samsung. Is there a way to be success on our markets or even can be successful. Today our market have three top major os’es. Their are them, iOS, android and tizen. Inside these all os’es, are too many android, any manufacture have one os. Is there a need to have a wide open source operating system. And I found it around 9 years ago in 2012. There is a lot of flaws on android, which was adopted by Microsoft fans and not unices people. There were so many oses there was a flaw too or could be huge. But the time is other. I already downloaded the kernels for samsung wave s8500, nexus 5 and nexus 5x even for nexus 6p. I installed too the git build system(gbs) and mic command tools on my machine. In the next day I will try to compile the kernels, then debug it on my machine.
 
-``` wp-block-preformatted
+``` bash
 → brew install virtualbox
 → brew cask install vagrant
 → brew cask install vagrant-manager
 ```
 
-→ touch Vagrantfile
+``` bash
+touch Vagrantfile
+nano Vagrantfile
+```
 
-→ nano Vagrantfile
-
-``` wp-block-preformatted
+``` bash
 Vagrant.configure("2") do |config|
 config.vm.box = "debian/jessie64"
 config.vm.provision "shell", inline: <<-SHELL
@@ -58,23 +59,25 @@ SHELL
 end
 ```
 
-→ vagrant up
-
-→ vagrant ssh
+``` bash
+vagrant up
+vagrant ssh
+```
 
 To halt the machine type:
 
-→ vagrant halt
+``` bash
+vagrant halt
+```
 
 `→ ``git clone --depth=1 https://github.com/raspberrypi/linux`
 
-→ git clone https://github.com/android-linux-stable/angler.git
-
-→ git clone https://github.com/franciscofranco/hammerhead.git
-
-→ git clone <https://github.com/Badadroid/android_kernel_samsung_wave.git>
-
-→ git clone <https://github.com/Qiangong2/tizen_kernel_samsung_z2.git>
+``` bash
+git clone https://github.com/android-linux-stable/angler.git
+git clone https://github.com/franciscofranco/hammerhead.git
+git clone https://github.com/Badadroid/android_kernel_samsung_wave.git
+git clone https://github.com/Qiangong2/tizen_kernel_samsung_z2.git
+```
 
 Day 2:
 
@@ -86,13 +89,11 @@ I am building a mic version kickstart. What is a kickstart file? Is a configurat
 
 I installed on my debian machine the following commands:
 
-→ nano /*etc/*apt/sources.list
-
-→ `deb `
-
-\[trusted=yes\]
-
-http://download.tizen.org/tools/latest-release/Ubuntu_16.04/ /
+``` bash
+nano /etc/apt/sources.list
+# add:
+deb [trusted=yes] http://download.tizen.org/tools/latest-release/Ubuntu_16.04/ /
+```
 
 `→ ``apt-get update`
 
@@ -126,13 +127,13 @@ I will teach or try to teach how to code web, c++. We can build too with tizen.N
 
 <https://releases.linaro.org/components/toolchain/binaries/latest-7/aarch64-linux-gnu/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu.tar.xz>
 
-→ tar xvf gcc-linaro-4.9.4-2017.01-x86_64_armeb-linux-gnueabi.tar.xz
+``` bash
+tar xvf gcc-linaro-4.9.4-2017.01-x86_64_armeb-linux-gnueabi.tar.xz
+sudo mkdir -p /opt/linaro
+sudo mv linaro-4.9 /opt/linaro/
+```
 
-→sudo mkdir -p /*opt/*linaro
-
-→ sudo mv linaro-4.9 /*opt/*linaro/
-
-``` wp-block-preformatted
+``` bash
 → cd kernel && make CROSS_COMPILE=folder_compile ARCH=arm tizen_tm1_defconfig
 ```
 
@@ -150,13 +151,12 @@ Nowadays is easy to get an approach with cli, mostly or basically for me linux i
 
 I type this too, to get to know how the partition works on an android device.
 
-→ adb shell - with device connected
-
-→ cat /*proc/*partititons
-
-→ `dd if=/dev/block/mmcblk0p6 of=/data/kernel_ramfs.img`
-
-→ `adb pull /data/kernel_ramfs.img`
+``` bash
+adb shell - with device connected
+cat /proc/partititons
+dd if=/dev/block/mmcblk0p6 of=/data/kernel_ramfs.img
+adb pull /data/kernel_ramfs.img
+```
 
 `Now I am stalled. I have been working around on gcc compilers to be successful on building kernels. I am trying to build a new kernel mainline to offer the 32 bit float and even 64 bit compliance. Every two weeks I will make my devlog updated. I am almost on my 6`^(`th`)` day of working and working arounds. I couldn’t found any solution for now for the compliance. The only thing I got for now was a VM, a building image obs success. Although or being despite on struggles I have my Tizen emulator working too well on the version hd 5.5 and 6.0. The wearables strain are not finished yet. It’s hard to build something in small days. I have been working around on these matters because I knew how to achieve some because the over the years of experience on gnu. I have been around downloading almost 6 devices to get work done. I desired to work on 6 devices that I own. These devices are nexus 5, Nokia n900, Sony z Ultra, Samsung i9300, Samsung S1, 8500 wave and ZTE Kies 3. I want to port the kernel to these devices. One is I want with the community helping. Other is to trying alone and spend a lot of hours against the knowledge behind these matters.`
 
@@ -176,74 +176,40 @@ D ay 7:
 
 Today I was reading how to do emulator compilation. I downloaded the qemu source code for macos. But the compilation I got working was for my ubuntu VM.
 
-\<code\>
-
-**html,**
-
-**body** {
-
-width: *100%*;
-
-height: *100%*;
-
-margin: *0* *auto*;
-
-padding: *0*;
-
-background-color: *\#222222*;
-
-color: *\#ffffff*;
-
+``` css
+html,
+body {
+width: 100%;
+height: 100%;
+margin: 0 auto;
+padding: 0;
+background-color: #222222;
+color: #ffffff;
 }
-
-*.page* {
-
-width: *100%*;
-
-height: *100%*;
-
-display: *table*;
-
+.page {
+width: 100%;
+height: 100%;
+display: table;
 }
-
-*.contents* {
-
-display: *table-cell*;
-
-vertical-align: *middle*;
-
-text-align: *center*;
-
--webkit-tap-highlight-color: *transparent*;
-
+.contents {
+display: table-cell;
+vertical-align: middle;
+text-align: center;
+-webkit-tap-highlight-color: transparent;
 }
-
-*\#content-text* {
-
-font-weight: *bold*;
-
-font-size: *5em*;
-
+#content-text {
+font-weight: bold;
+font-size: 5em;
 }
-
-*.dark-mode* {
-
-background-color: *black*;
-
-color: *white*;
-
+.dark-mode {
+background-color: black;
+color: white;
 }
-
-\</code\>
-
-\<code\>
-
-function myFunction() {\
-  var element = document.body;\
-  element.classList.toggle("dark-mode");\
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
 }
-
-\</code\>
+```
 
 Day 8 and 9:
 
@@ -261,21 +227,16 @@ Building a repo on dropBox
 
 --make an empty repo on dropbox
 
+``` bash
 cd ~/Dropbox/demo/Git
-
 mkdir -p newname.git
-
 cd newname.git
-
 git –-bare init
-
 --Updating system
-
 cd ~/Projects/newrepo
-
-git remote add dropbox [file://\$HOME/demo/Git/newname.git](/demo/Git/newname.git)
-
+git remote add dropbox file://$HOME/demo/Git/newname.git
 git push dropbox main
+```
 
 I am building a SaaS system at home for my work. I have already built a Ubuntu and a gentoo system for my own code git system. I have now a FreeDOS too on working on virtualbox. I will have my Tizen building folders on a private repository too.
 
@@ -307,9 +268,10 @@ Day 12:
 
 Typescript for Tizen projects
 
-→ sudo emerge @world
-
-→ sudo emerge vim dosbox
+``` bash
+sudo emerge @world
+sudo emerge vim dosbox
+```
 
 Day 1-2-3:
 
@@ -335,19 +297,21 @@ Day Break:
 
 I have downloaded the zte open c/ kies 3 model kernel Linux, I will show how we code kernel for tizen too with this version of kernel.
 
-→ git clone <https://github.com/HacKurx/android_kernel-unofficial-grsec_zte_msm8610.git> kernels/zte/msm8610
-
-→ vim ~/.vimrc
+``` bash
+git clone https://github.com/HacKurx/android_kernel-unofficial-grsec_zte_msm8610.git kernels/zte/msm8610
+vim ~/.vimrc
+```
 
 → filetype plugin ident on
 
 → syntax on
 
-→ set title
+``` bash
+set title
+set tabstop=8
+```
 
-→ set tabstop=8
-
-``` wp-block-preformatted
+``` bash
 → set softtabstop=8
 → set shiftwidth=8
 → set noexpandtab
@@ -355,25 +319,28 @@ I have downloaded the zte open c/ kies 3 model kernel Linux, I will show how we 
 
 or:
 
-→ :set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
-
-→ sudo update-alternatives --config editor
+``` text
+:set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
+sudo update-alternatives --config editor
+```
 
 These lines are to be or must be typed to help us on coding the system. The kernel must static libs to prevent the shared linking issues. All the kernel structure must optimized and with the modules necessary. Or even to be mandatory.
 
 Tips:
 
-→ config.vm.synced_folder "myblog/", "/home/vagrant/myblog/"
+``` text
+config.vm.synced_folder "myblog/", "/home/vagrant/myblog/"
+```
 
 Add this to prevent the stall on the purge of the system on Vagrant.
 
 On ~/.profile:
 
-→ export ARCH=arm
-
-→ export CROSS_COMPILE=/opt/linaro-4.9/bin/arm-linux-gnueabihf-
-
-→ source ~/.profile
+``` bash
+export ARCH=arm
+export CROSS_COMPILE=/opt/linaro-4.9/bin/arm-linux-gnueabihf-
+source ~/.profile
+```
 
 Yesterday I could build a kernel for zte kies/open c. A normal kernel with gperf. I won’t talk about inclosure gperf, for now. Gperf is a good assessment for linux kerrnel. In a future post I will write it about that.
 

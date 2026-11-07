@@ -18,7 +18,9 @@ Assim, irei apresentar o tutorial. Obrigado.
 
 Para sabermos, como é que funcionam os comando linux/unix podemos escrever este comando:
 
+``` bash
 man nome_do_comando;
+```
 
 Exemplo: man ls.
 
@@ -86,7 +88,9 @@ Com este comentário, o interpretador de shell irá interpretá-lo como um scrip
 
 O comentário faz-se desta forma: \#
 
+``` text
 variável é da seguinte maneira: variável=”valor”
+```
 
 a escrita para o monitor é: echo ”mensagem que queremos apresentar”
 
@@ -108,15 +112,21 @@ Exemplo de um script simples:
 
 \#!/bin/sh
 
+``` bash
 echo “ola mundo”
+```
 
 Gravamos com a extensão .sh ou sem extensão e com  o nome hello. Porque iremos fazer o seguinte comando e para todos eles:
 
-chmod +x  hello.sh ou chmod +x hello
+``` bash
+chmod +x  hello.sh ou chmod +x hello
+```
 
 Agora, iremos executá-lo da seguinte maneira:
 
+``` bash
 ./hello.sh ou ./hello
+```
 
 E a mensagem que é apresentada é ola mundo.
 
@@ -128,9 +138,10 @@ Exemplo:
 
 \#variavel
 
+``` bash
 ola=”ola mundo”
-
-echo \$ola
+echo $ola
+```
 
 O cifrão é para indicar que é uma variável.
 
@@ -144,15 +155,13 @@ Exemplo de uma estrutura if:
 
 \#!/bin/sh
 
-if test -e \$1;
-
+``` bash
+if test -e $1;
 then
-
 echo “o ficheiro existe”
-
 else
-
 echo “o ficheiro não existe”
+```
 
 fi
 
@@ -162,17 +171,15 @@ Isto é um exemplo, e é aplicável para outras directorias e ficheiros de todo 
 
 Irei, agora tratar o caso do case.
 
+``` bash
 Exemplo;
-
-\#!/bin/sh
-
-case “\$variavel” in
-
+#!/bin/sh
+case “$variavel” in
 1.  comandos;;
 2.  comandos;;
 3.  comandos;;
-
-\*) echo “opcao invalida”;;
+*) echo “opcao invalida”;;
+```
 
 esac
 
@@ -180,11 +187,11 @@ já explicarei o case, porque não consigo explicá-lo sem usar funções. Por i
 
 A sintaxe de uma funcão é:
 
+``` bash
 sair(){
-
-            exit 1
-
+            exit 1
 }
+```
 
 Assim, irei mostrar uma forma de case aplicável.
 
@@ -192,48 +199,30 @@ Assim, irei mostrar uma forma de case aplicável.
 
 \# funcoes sair lista limpar e principal
 
+``` bash
 sair(){
-
-            exit 1
-
+            exit 1
 }
-
 lista(){
-
-            ls -lisa \$1\|more
-
+            ls -lisa $1|more
 }
-
 limpar(){
-
-                clear
-
+                clear
 }
-
-principal(){    
-
-                         echo -n “escolha uma das opcoes”
-
-                        echo “1. lista”
-
-                        echo “2. limpar  o ecran”
-
-                        echo “3. sair do programa”
-
-                         read opcao
-
-                                     case \$opcao in
-
-                                     1)lisa;;
-
+principal(){
+                         echo -n “escolha uma das opcoes”
+                        echo “1. lista”
+                        echo “2. limpar  o ecran”
+                        echo “3. sair do programa”
+                         read opcao
+                                     case $opcao in
+                                     1)lisa;;
 - limpar;;
   - sair;;
-
-\*) echo “opcao invalida”: exit 1;;
-
+*) echo “opcao invalida”: exit 1;;
 esac
-
 }
+```
 
 \#menu principal
 
@@ -243,29 +232,30 @@ Há várias formas de ciclos. Eles são o while, do, for e o until. Cada um tem 
 
 Sintaxe do while:
 
+``` bash
 while condicao
-
 do
-
 bloco de instrucoes;
+```
 
 done
 
 exemplo prático de um while:
 
+``` bash
 ver =”n”
-
-while \[\$ver !=”y”\]
+while [$ver !=”y”]
+```
 
 do
 
 read ver
 
+``` bash
 echo “introduza uma opcao”
-
 read opcao
-
-echo “e esta a \$opcao correcta (y/n)”
+echo “e esta a $opcao correcta (y/n)”
+```
 
 read ver
 
@@ -279,7 +269,9 @@ until condicao_verdadeira
 
 do
 
+``` bash
 bloco de instrucoes;
+```
 
 done
 
@@ -291,17 +283,19 @@ until \[-z \$1\]
 
 do
 
-ls -lisa \$1\|more
+``` bash
+ls -lisa $1|more
+```
 
 done
 
 A sintaxe do for é:
 
-for variavel \[in lista\]
-
+``` bash
+for variavel [in lista]
 do
-
 bloco_de_instruções;
+```
 
 done
 
@@ -311,9 +305,10 @@ Exemplo de um for:
 
 \#comeco do programa
 
+``` bash
 for i in pedro,1,sara,luis;do
-
-echo “a lista é: \$i”
+echo “a lista é: $i”
+```
 
 done
 
@@ -327,15 +322,18 @@ Exemplos de comandos interessantes:
 
 ping:
 
+``` bash
 ping ip_do_destino
-
 ping endereco_de_destino
+```
 
 man ping para visualizar os parâmetros
 
 rm:
 
+``` bash
 rm nome_do_ficheiro
+```
 
 man rm para visualizar os parâmetros
 
@@ -347,13 +345,17 @@ date +”ola são %H e %M”
 
 tail:
 
+``` bash
 tail -n numero a visualizar nome_do_ficheiro
+```
 
 man tail para visualizar os parâmetros
 
 more:
 
+``` bash
 more nome_do_ficheiro
+```
 
 man more para visualizar os parâmetros
 
@@ -361,6 +363,8 @@ Podem também usar o pipe, isto é, agregar comandos, instruções numa linha s�
 
 Exemplo:
 
-ls -lisa directorio_de_destino\|more
+``` bash
+ls -lisa directorio_de_destino|more
+```
 
 Espero que eu tenha esclarecido e tenha tirado algumas dúvidas que tenham. Espero também que haja mais tutoriais meus a explicar como este. Em breve irei escrever um tutorial a explicar como é que se usa o Xdialog.

@@ -22,9 +22,7 @@ Ahora, vamos a aprender cómo usar el comando dir, este comando es muy útil par
 
 ![](Screenshot-2023-03-05-at-11.57.04.png)
 
-``` wp-block-preformatted
 Ahora vamos a ver el comando ver, con este comando podemos ver la versión del sistema en sí.
-```
 
 ![](Screenshot-2023-03-05-at-11.58.11.png)
 
@@ -36,7 +34,7 @@ Ahora, vamos a aprender cómo cambiar el directorio con el comando cd. Tenemos u
 
 ![](Screenshot-2023-03-05-at-12.05.28.png)
 
-``` wp-block-preformatted
+``` text
 Finalmente, la pantalla clara, el comando cls.
 ```
 

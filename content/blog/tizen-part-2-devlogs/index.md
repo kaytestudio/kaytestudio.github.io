@@ -21,14 +21,14 @@ We need to think like binary code, and we must a passionate person to code, reme
 
 The following example code you see:
 
-``` wp-block-preformatted
+``` c
 layout = elm_layout_add(parent);
 elm_layout_theme_set(layout, "layout", "drawer", "panel");
 ```
 
 Shows how the layout can be modified as instantiated. Creating an instance.
 
-``` wp-block-preformatted
+``` c
 typedef struct appdata
 {
    // Save the window
@@ -74,7 +74,7 @@ app_create(void *data)
 }
 ```
 
-``` wp-block-preformatted
+``` c
 ad->win = elm_win_util_standard_add(PACKAGE, PACKAGE);
 elm_win_autodel_set(ad->win, EINA_TRUE);
 
@@ -112,7 +112,7 @@ Next steps, we must take to follow our knowledge on the application design and c
 
 The working clock system is a new example that I will show. It’s a very good starting point.
 
-``` wp-block-preformatted
+``` c
 typedef struct appdata
 {
    // Save the window
@@ -121,7 +121,7 @@ typedef struct appdata
 appdata_s;
 ```
 
-``` wp-block-preformatted
+``` c
 int
 main(int argc, char *argv[])
 {
@@ -160,7 +160,7 @@ app_create(void *data)
 }
 ```
 
-``` wp-block-preformatted
+``` c
 static Evas_Object *
 create_clock(Evas_Object *nf)
 {
@@ -230,7 +230,7 @@ gl_text_get_cb(void *data, Evas_Object *obj, const char *part)
 }
 ```
 
-``` wp-block-preformatted
+``` c
 num_of_item = 3;
 
    for (i = 0; i < num_of_item; i++)
@@ -274,7 +274,7 @@ create_base_gui(appdata_s *ad)
 
 This is a box component.
 
-``` wp-block-preformatted
+``` c
 static void
 win_back_cb(void *data , int type , void *event)
 {

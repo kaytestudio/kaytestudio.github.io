@@ -14,7 +14,9 @@ Otra vez con mas un tutorial sobre macOS, hoy tenemos como trabajar con gtk en B
 
 Para compilación:
 
-gcc \`pkg-config --cflags gtk+-3.0\` -o example-0 mainwindow.cc \`pkg-config --libs gtk+-3.0\`
+``` bash
+gcc `pkg-config --cflags gtk+-3.0` -o example-0 mainwindow.cc `pkg-config --libs gtk+-3.0`
+```
 
 Pero primer, abrir mí gtk gist:
 
@@ -22,7 +24,7 @@ Pero primer, abrir mí gtk gist:
 
 Pero, podemos testear con esto:
 
-``` wp-block-code
+``` c
 #include <gtk/gtk.h>
 
 static void
@@ -55,7 +57,7 @@ main (int    argc,
 
 Por fin:
 
-``` wp-block-code
+``` bash
  gcc `pkg-config --cflags gtk+-3.0` -o example-0 mainwindow.cc `pkg-config --libs gtk+-3.0`
 ```
 

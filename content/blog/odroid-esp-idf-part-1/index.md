@@ -36,12 +36,12 @@ Software:
 
 Linux & MacOS
 
-``` wp-block-preformatted
+``` bash
 cd ~/esp
 git clone --recursive https://github.com/espressif/esp-idf.git
 ```
 
-``` wp-block-preformatted
+``` bash
 cd ~/esp/esp-idf
 ./install.sh
 . $HOME/esp/esp-idf/export.sh
@@ -49,7 +49,7 @@ cd ~/esp/esp-idf
 
 Start a project for esp32
 
-``` wp-block-preformatted
+``` bash
 cd ~/esp
 cp -r $IDF_PATH/examples/get-started/hello_world .
 ```
@@ -64,7 +64,7 @@ Serial ports have the following patterns in their names:
 
 Linux & MacOS:
 
-``` wp-block-preformatted
+``` bash
 cd ~/esp/hello_world
 idf.py menuconfig
 ```
@@ -73,7 +73,7 @@ idf.py menuconfig
 
 Build:
 
-``` wp-block-preformatted
+``` bash
 idf.py build
 ```
 

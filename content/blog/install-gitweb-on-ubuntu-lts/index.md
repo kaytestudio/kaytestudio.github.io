@@ -14,24 +14,24 @@ coder by gleentech will teach how to install gtiweb on an Ubuntu LTS
 
 Aptitude:
 
-→ sudo aptitude install -y gitweb
-
+``` bash
+sudo aptitude install -y gitweb
 apt mode:
-
-→ sudo apt install -y gitweb
-
+sudo apt install -y gitweb
 apt-get install
-
-→ sudo apt-get install -y gitweb
-
+sudo apt-get install -y gitweb
 Uninstall the gitweb
-
-→ sudo apt-get autoremove gitweb
+sudo apt-get autoremove gitweb
+```
 
 With all dependencies:
 
-→ sudo apt-get -y autoremove gitweb
+``` bash
+sudo apt-get -y autoremove gitweb
+```
 
 First of all, before you choose to install gitweb do the following steps:
 
-→ sudo apt update && sudo apt upgrade
+``` bash
+sudo apt update && sudo apt upgrade
+```

@@ -12,7 +12,7 @@ Hello readers,
 
 Today, we are going to learn how to preview a markdown file with preview on vs code.
 
-``` wp-block-code
+``` text
 
 #  ringsce editor
 This is an editor written with Lazarus IDE and free Pascal. Where you can use for ringsce repo to build the engine
@@ -37,7 +37,7 @@ You can contact us here. Or try to chat with us at discord: plvicente
 
 ```
 
-``` wp-block-code
+``` text
 cmd + shift + v
 ```
 
