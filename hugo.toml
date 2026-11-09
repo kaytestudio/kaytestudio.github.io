@@ -61,6 +61,36 @@ theme = 'bluebar'
       { name = 'os24arm', url = 'https://github.com/kaytestudio/os24arm/issues' },
     ]
 
+  [params.footer]
+    credit = 'Made with ❤️ by Kayte Studio'
+    [[params.footer.columns]]
+      title = 'Studio'
+      links = [
+        { name = 'About', url = '/about/' },
+        { name = 'Our Work', url = '/work/' },
+        { name = 'Blog', url = '/blog/' },
+      ]
+    [[params.footer.columns]]
+      title = 'Projects'
+      links = [
+        { name = 'Kayte Lang', url = 'https://github.com/kaytestudio/kayte-lang' },
+        { name = 'KayteIDE', url = 'https://github.com/kaytestudio/kayteide' },
+        { name = 'os24arm', url = 'https://github.com/kaytestudio/os24arm' },
+      ]
+    [[params.footer.columns]]
+      title = 'Community'
+      links = [
+        { name = 'GitHub', url = 'https://github.com/kaytestudio' },
+        { name = 'Kayte Lang issues', url = 'https://github.com/kaytestudio/kayte-lang/issues' },
+        { name = 'KayteIDE issues', url = 'https://github.com/kaytestudio/kayteide/issues' },
+      ]
+    [[params.footer.columns]]
+      title = 'Legal'
+      links = [
+        { name = 'Contact', url = '/contact/' },
+        { name = 'Legal notice', url = '/legal/' },
+      ]
+
   [params.sidebar]
     title = 'Quick Links'
     links = [ { name = 'About us', url = '/about/' }, { name = 'All posts', url = '/blog/' } ]
@@ -95,9 +125,6 @@ theme = 'bluebar'
     name = 'Contact'
     pageRef = '/contact'
     weight = 40
-  [[menus.footer]]
-    name = 'Legal'
-    url = '/legal/'
 
 [taxonomies]
   tag = 'tags'

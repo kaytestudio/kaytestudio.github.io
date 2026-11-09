@@ -1,6 +1,24 @@
 <footer class="site-footer">
+  {{ with site.Params.footer.columns }}
+  <div class="wrap footer-columns">
+    {{ range . }}
+    <div class="footer-col">
+      <h3 class="footer-heading">{{ .title }}</h3>
+      <ul>
+        {{ range .links }}
+        {{ $external := strings.HasPrefix .url "http" }}
+        <li><a class="footer-link" href="{{ .url }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}>{{ .name }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
   <div class="wrap footer-inner">
-    <div>&copy; {{ with site.Params.copyrightStart }}{{ . }} – {{ end }}{{ now.Year }} {{ site.Params.copyright | default site.Title }}</div>
+    <div class="footer-copy">
+      <div>&copy; {{ with site.Params.copyrightStart }}{{ . }} – {{ end }}{{ now.Year }} {{ site.Params.copyright | default site.Title }}</div>
+      {{ with site.Params.footer.credit }}<div class="footer-credit">{{ . | markdownify }}</div>{{ end }}
+    </div>
     <div class="footer-center">
       {{ range site.Menus.footer }}<a class="footer-link" href="{{ .URL }}">{{ .Name }}</a>{{ end }}
     </div>
