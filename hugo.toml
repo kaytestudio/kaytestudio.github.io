@@ -6,6 +6,13 @@ theme = 'bluebar'
 [pagination]
   pagerSize = 10
 
+# RSS feeds are published as rss.xml (/rss.xml and /blog/rss.xml) instead of index.xml.
+[outputFormats.rss]
+  baseName = 'rss'
+
+[services.rss]
+  limit = 20   # most recent posts per feed (-1 = all)
+
 [params]
   description = 'Kayte Studio — design and development.'
   copyright = 'Kreatyve Designs. All Rights Reserved.'
@@ -69,6 +76,7 @@ theme = 'bluebar'
         { name = 'About', url = '/about/' },
         { name = 'Our Work', url = '/work/' },
         { name = 'Blog', url = '/blog/' },
+        { name = 'RSS feed', url = '/blog/rss.xml' },
       ]
     [[params.footer.columns]]
       title = 'Projects'
@@ -103,6 +111,10 @@ theme = 'bluebar'
     name = 'Instagram'
     url = 'https://instagram.com/'
     icon = 'instagram'
+  [[params.social]]
+    name = 'RSS'
+    url = '/blog/rss.xml'
+    icon = 'rss'
   [[params.social]]
     name = 'Email'
     url = 'mailto:pedrolvicente@gmail.com'

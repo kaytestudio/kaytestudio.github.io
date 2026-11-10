@@ -1,0 +1,40 @@
+{{- /* RSS 2.0 feed. The home feed (/rss.xml) lists posts from params.mainSections only, so it matches /blog/rss.xml instead of mixing in pages like About or Work. */ -}}
+{{- $pages := .RegularPages -}}
+{{- if .IsHome -}}
+  {{- $pages = where site.RegularPages "Section" "in" (site.Params.mainSections | default (slice "blog")) -}}
+{{- end -}}
+{{- $limit := site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 }}{{ $pages = $pages | first $limit }}{{ end -}}
+{{- $title := site.Title -}}
+{{- if not .IsHome }}{{ $title = printf "%s | %s" .Title site.Title }}{{ end -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ $title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ site.Params.description | default (printf "Recent content on %s" site.Title) }}</description>
+    <generator>Hugo</generator>
+    <language>{{ site.Language.Locale }}</language>
+    {{- with site.Params.copyright }}
+    <copyright>{{ . }}</copyright>
+    {{- end }}
+    {{- with $pages }}{{ with index . 0 }}
+    <lastBuildDate>{{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{- end }}{{ end }}
+    {{- with .OutputFormats.Get "rss" }}
+    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{- end }}
+    {{- range $pages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <guid>{{ .Permalink }}</guid>
+      {{- range .GetTerms "categories" }}
+      <category>{{ .LinkTitle }}</category>
+      {{- end }}
+      <description>{{ with .Description }}{{ . | transform.XMLEscape | safeHTML }}{{ else }}{{ .Summary | transform.XMLEscape | safeHTML }}{{ end }}</description>
+    </item>
+    {{- end }}
+  </channel>
+</rss>
