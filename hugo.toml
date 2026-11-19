@@ -68,10 +68,21 @@ theme = 'kayte'
       { name = 'os24arm', url = 'https://github.com/kaytestudio/os24arm/issues' },
     ]
 
+  [params.nav.cta]            # orange call-to-action button on the right of the header
+    name = 'GitHub'
+    url = 'https://github.com/kaytestudio'
+    icon = 'github'
+
   [params.footer]
     credit = 'Made with ❤️ by Kayte Studio'
+    note = 'Kayte Studio designs and builds thoughtful digital products — languages, tools and emulators, all open source.'
+    buttons = [   # first button is orange (primary), the rest are ghost buttons
+      { name = 'Get in touch', url = '/contact/', icon = 'chat' },
+      { name = 'Source code', url = 'https://github.com/kaytestudio', icon = 'code' },
+    ]
     [[params.footer.columns]]
       title = 'Studio'
+      icon = 'home'
       links = [
         { name = 'About', url = '/about/' },
         { name = 'Our Work', url = '/work/' },
@@ -80,6 +91,7 @@ theme = 'kayte'
       ]
     [[params.footer.columns]]
       title = 'Projects'
+      icon = 'code'
       links = [
         { name = 'Kayte Lang', url = 'https://github.com/kaytestudio/kayte-lang' },
         { name = 'KayteIDE', url = 'https://github.com/kaytestudio/kayteide' },
@@ -87,6 +99,7 @@ theme = 'kayte'
       ]
     [[params.footer.columns]]
       title = 'Community'
+      icon = 'users'
       links = [
         { name = 'GitHub', url = 'https://github.com/kaytestudio' },
         { name = 'Kayte Lang issues', url = 'https://github.com/kaytestudio/kayte-lang/issues' },
@@ -94,6 +107,7 @@ theme = 'kayte'
       ]
     [[params.footer.columns]]
       title = 'Legal'
+      icon = 'doc'
       links = [
         { name = 'Contact', url = '/contact/' },
         { name = 'Legal notice', url = '/legal/' },
@@ -123,18 +137,22 @@ theme = 'kayte'
 [menus]
   [[menus.main]]
     name = 'About'
+    params = { icon = 'user' }
     pageRef = '/about'
     weight = 10
   [[menus.main]]
     name = 'Our Work'
+    params = { icon = 'grid' }
     pageRef = '/work'
     weight = 20
   [[menus.main]]
     name = 'Blog'
+    params = { icon = 'news' }
     pageRef = '/blog'
     weight = 30
   [[menus.main]]
     name = 'Contact'
+    params = { icon = 'chat' }
     pageRef = '/contact'
     weight = 40
 

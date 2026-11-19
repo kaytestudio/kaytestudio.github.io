@@ -1,36 +1,49 @@
-<footer class="site-footer">
-  {{ with site.Params.footer.columns }}
-  <div class="wrap footer-columns">
-    <div class="footer-brand">
-      {{ with resources.Get "kayte.png" }}{{ with .Resize "96x webp" }}<img class="footer-logo" src="{{ .RelPermalink }}" width="48" height="48" alt="Kayte" loading="lazy">{{ end }}{{ end }}
-    </div>
-    <div class="footer-columns-grid">
-    {{ range . }}
-    <div class="footer-col">
-      <h3 class="footer-heading">{{ .title }}</h3>
-      <ul>
-        {{ range .links }}
-        {{ $external := strings.HasPrefix .url "http" }}
-        <li><a class="footer-link" href="{{ .url }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}>{{ .name }}</a></li>
+{{ $f := site.Params.footer }}
+<footer class="ui-footer" id="site-links">
+  <div class="wrap">
+    <div class="ui-footer-grid">
+      <div class="ui-footer-brand">
+        <a class="ui-footer-logo" href="{{ "/" | relURL }}" aria-label="{{ site.Title }} home">
+          {{- with site.Params.logo }}{{ with resources.Get . }}{{ with .Resize "128x128 webp q85" }}<img src="{{ .RelPermalink }}" width="64" height="64" alt="" loading="lazy">{{ end }}{{ end }}{{ end -}}
+          <span>{{ site.Title }}</span>
+        </a>
+        {{ with $f.note | default site.Params.description }}<p class="ui-footer-note">{{ . | markdownify }}</p>{{ end }}
+        {{ with $f.buttons }}
+        <div class="ui-footer-buttons">
+          {{ range $i, $b := . }}
+          {{ $external := strings.HasPrefix $b.url "http" }}
+          <a class="ui-btn{{ if eq $i 0 }} is-primary{{ else }} is-ghost{{ end }}" href="{{ $b.url }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}>
+            {{ with $b.icon }}<span class="ui-btn-icon">{{ partial "icon.html" . }}</span>{{ end }}<span class="ui-btn-label">{{ $b.name }}</span>
+          </a>
+          {{ end }}
+        </div>
         {{ end }}
-      </ul>
-    </div>
-    {{ end }}
-    </div>
-  </div>
-  {{ end }}
-  <div class="wrap footer-inner">
-    <div class="footer-copy">
-      <div>&copy; {{ with site.Params.copyrightStart }}{{ . }} – {{ end }}{{ now.Year }} {{ site.Params.copyright | default site.Title }}</div>
-      {{ with site.Params.footer.credit }}<div class="footer-credit">{{ . | markdownify }}</div>{{ end }}
-    </div>
-    <div class="footer-center">
-      {{ range site.Menus.footer }}<a class="footer-link" href="{{ .URL }}">{{ .Name }}</a>{{ end }}
-    </div>
-    <div class="social">
-      {{ range site.Params.social }}
-        <a href="{{ .url }}" target="_blank" rel="noopener" title="{{ .name }}" aria-label="{{ .name }}">{{ partial "icon.html" .icon }}</a>
+        {{ with site.Params.social }}
+        <div class="ui-social-row" role="group" aria-label="{{ site.Title }} elsewhere">
+          {{ range . }}
+          {{ $external := strings.HasPrefix .url "http" }}
+          <a class="ui-social" href="{{ .url }}"{{ if $external }} target="_blank" rel="noopener"{{ end }} title="{{ .name }}" aria-label="{{ .name }}">{{ partial "icon.html" .icon }}</a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ with $f.columns }}
+      <div class="ui-footer-cols">
+        {{ range . }}
+        <div class="ui-footer-col">
+          <h3 class="ui-footer-title">{{ with .icon }}{{ partial "icon.html" . }}{{ end }}<span>{{ .title }}</span></h3>
+          {{ range .links }}
+          {{ $external := strings.HasPrefix .url "http" }}
+          <a class="ui-footer-link" href="{{ .url }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}>{{ partial "icon.html" (.icon | default (cond $external "external" "chevron")) }}<span>{{ .name }}</span></a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
       {{ end }}
+    </div>
+    <div class="ui-footer-bottom">
+      <span>&copy; {{ with site.Params.copyrightStart }}{{ . }} – {{ end }}{{ now.Year }} {{ site.Params.copyright | default site.Title }}</span>
+      {{ with $f.credit }}<span>{{ . | markdownify }}</span>{{ end }}
     </div>
   </div>
 </footer>

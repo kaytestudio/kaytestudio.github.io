@@ -1,6 +1,6 @@
-<header class="navbar">
-  <div class="wrap navbar-inner">
-    <a class="brand" href="{{ "/" | relURL }}">
+<header class="ui-nav">
+  <div class="wrap ui-nav-bar">
+    <a class="ui-nav-brand" href="{{ "/" | relURL }}" aria-label="{{ site.Title }} home">
       {{- with site.Params.logo }}
         {{- with resources.Get . }}
           {{- $x1 := .Resize "48x48 webp q85" }}{{ $x2 := .Resize "96x96 webp q85" }}
@@ -12,27 +12,36 @@
       {{- if site.Params.logoShowTitle | default true }}<span class="brand-text">{{ site.Title }}</span>{{ end }}
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
-    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
-      <span class="icon-moon">{{ partial "icon.html" "moon" }}</span><span class="icon-sun">{{ partial "icon.html" "sun" }}</span>
-    </button>
-    <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true"><span></span><span></span><span></span></label>
-    <nav aria-label="Main">
-      <ul class="nav">
+    <nav class="ui-nav-menu-wrap" aria-label="Main">
+      <ul class="ui-nav-menu">
         {{ $current := . }}
         {{ range site.Menus.main }}
           {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
-          {{ if .HasChildren }}
-          <li class="dropdown{{ if $active }} active{{ end }}">
-            <a href="{{ with .URL }}{{ . }}{{ else }}#{{ end }}" aria-haspopup="true">{{ .Name }}<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              {{ range .Children }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>{{ end }}
-            </ul>
+          <li class="ui-nav-item{{ if .HasChildren }} has-drop{{ end }}">
+            <a class="ui-nav-link{{ if $active }} is-active{{ end }}" href="{{ with .URL }}{{ . }}{{ else }}#{{ end }}"{{ if $active }} aria-current="page"{{ end }}{{ if .HasChildren }} aria-haspopup="true"{{ end }}>
+              {{- with .Params.icon }}{{ partial "icon.html" . }}{{ end }}<span>{{ .Name }}</span>
+              {{- if .HasChildren }}<span class="ui-nav-caret" aria-hidden="true"></span>{{ end -}}
+            </a>
+            {{ if .HasChildren }}
+            <div class="ui-nav-drop">
+              {{ range .Children }}<a class="ui-nav-sublink" href="{{ .URL }}">{{ with .Params.icon }}{{ partial "icon.html" . }}{{ end }}<span>{{ .Name }}</span></a>{{ end }}
+            </div>
+            {{ end }}
           </li>
-          {{ else }}
-          <li{{ if $active }} class="active"{{ end }}><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li>
-          {{ end }}
         {{ end }}
       </ul>
     </nav>
+    <div class="ui-nav-actions">
+      <button type="button" class="ui-icon-btn theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+        <span class="icon-moon">{{ partial "icon.html" "moon" }}</span><span class="icon-sun">{{ partial "icon.html" "sun" }}</span>
+      </button>
+      {{ with site.Params.nav.cta }}
+      {{ $external := strings.HasPrefix .url "http" }}
+      <a class="ui-btn is-primary ui-nav-cta" href="{{ .url }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}>
+        {{ with .icon }}<span class="ui-btn-icon">{{ partial "icon.html" . }}</span>{{ end }}<span class="ui-btn-label">{{ .name }}</span>
+      </a>
+      {{ end }}
+      <label for="nav-toggle" class="ui-icon-btn ui-nav-burger" aria-hidden="true">{{ partial "icon.html" "menu" }}</label>
+    </div>
   </div>
 </header>
